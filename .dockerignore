@@ -1,0 +1,8 @@
+# Ignore symbolic links and unnecessary directories
+backend/public/storage
+backend/storage
+backend/vendor
+backend/node_modules
+.git
+.env
+*.log
