@@ -1,0 +1,78 @@
+# Build stage
+FROM php:8.3-fpm AS builder
+
+# Set environment variables for build
+ENV COMPOSER_ALLOW_SUPERUSER=1
+ENV COMPOSER_MEMORY_LIMIT=-1
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    zip unzip curl git procps \
+    libzip-dev libpng-dev libonig-dev libxml2-dev \
+    && docker-php-ext-install pdo pdo_mysql zip pcntl \
+    && pecl install redis \
+    && docker-php-ext-enable redis \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+WORKDIR /var/www
+
+# Copy composer files first for better caching
+COPY ./backend/composer.json ./backend/composer.lock* ./
+
+# Install dependencies
+RUN composer install --no-dev --optimize-autoloader --no-scripts --prefer-dist
+
+# Copy application files
+COPY ./backend .
+
+# Create required directories and set permissions
+RUN mkdir -p storage/logs \
+    && mkdir -p storage/app \
+    && mkdir -p storage/framework/cache \
+    && mkdir -p storage/framework/sessions \
+    && mkdir -p storage/framework/views \
+    && mkdir -p bootstrap/cache \
+    && chmod -R 775 storage bootstrap/cache
+
+# Run post-install scripts
+RUN composer dump-autoload --optimize \
+    && php artisan package:discover --ansi
+
+# Runtime stage - Use CLI instead of FPM for Reverb
+FROM php:8.3-cli
+
+# Install runtime dependencies
+RUN apt-get update && apt-get install -y \
+    zip unzip curl git procps \
+    libzip-dev libpng-dev libonig-dev libxml2-dev \
+    && docker-php-ext-install pdo pdo_mysql zip pcntl \
+    && pecl install redis \
+    && docker-php-ext-enable redis \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy application from builder
+COPY --from=builder /var/www /var/www
+COPY --from=builder /usr/local/etc/php /usr/local/etc/php
+
+# Set ownership and permissions
+RUN chown -R www-data:www-data /var/www \
+    && chmod -R 775 /var/www/storage /var/www/bootstrap/cache
+
+# Create non-root user for security
+USER www-data
+
+WORKDIR /var/www
+
+EXPOSE 8080
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:8080/health || exit 1
+
+# Start Reverb server
+CMD ["php", "artisan", "reverb:start", "--host=0.0.0.0", "--port=8080", "--verbose"]
