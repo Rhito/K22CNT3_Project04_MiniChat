@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -68,11 +68,16 @@ class AuthController extends Controller
 
     public function logout(Request $request)
     {
-       $user = Auth::user()->currentAccessToken()->delete();
-        Log::debug($user);
-        if(!$user){
-
+        $user = $request->user();
+        if ($user) {
+            $user->currentAccessToken()->delete();
+            return $this->success(null, 'Logged out');
         }
-        return $this->success('', 'Logged out successfully');
+        return $this->error('No authenticated user', null, 401);
     }
+
+    public function user(Request $request){
+        return new UserResource($request->user());
+    }
+
 }

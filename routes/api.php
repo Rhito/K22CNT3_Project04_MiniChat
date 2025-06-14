@@ -1,18 +1,29 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\V1\AuthController;
+use App\Http\Controllers\Api\V1\FriendController;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+// API Version 1
+Route::prefix('v1')->group(function () {
+    // Public routes
+    Route::post('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/register', [AuthController::class, 'register'])->name('v1.register');
 
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/register', [AuthController::class, 'register']);
+    // Protected routes
+    Route::middleware('auth:sanctum')->group(function () {
+        // AUTHENTICATED
+        Route::post('/logout', [AuthController::class, 'logout'])->name('v1.logout');
+        Route::get('/user', [AuthController::class, 'user'])->name('v1.user');
 
-// protected routes
-Route::middleware(['auth:sanctum', ''])->group(function () {
-    Route::post('/logout', [AuthController::class, 'logout']);
-
+        // FRIENDS ENDPOINT
+        Route::prefix('friends')->group(function () {
+            Route::post('request', [FriendController::class, 'sendRequest']);
+            Route::get('requests', [FriendController::class, 'receivedRequests']);
+            Route::post('accept', [FriendController::class, 'acceptRequest']);
+            Route::delete('reject', [FriendController::class, 'rejectRequest']);
+            Route::get('/', [FriendController::class, 'list']);
+            Route::delete('{id}', [FriendController::class, 'remove']);
+        });
+    });
 });
