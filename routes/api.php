@@ -7,7 +7,7 @@ use App\Http\Controllers\Api\V1\FriendController;
 // API Version 1
 Route::prefix('v1')->group(function () {
     // Public routes
-    Route::post('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/login', [AuthController::class, 'login'])->name('v1.login');
     Route::post('/register', [AuthController::class, 'register'])->name('v1.register');
 
     // Protected routes
@@ -21,7 +21,7 @@ Route::prefix('v1')->group(function () {
             Route::post('request', [FriendController::class, 'sendRequest']);
             Route::get('requests', [FriendController::class, 'receivedRequests']);
             Route::post('accept', [FriendController::class, 'acceptRequest']);
-            Route::delete('reject', [FriendController::class, 'rejectRequest']);
+            Route::patch('reject/{id}', [FriendController::class, 'rejectRequest']);
             Route::get('/', [FriendController::class, 'list']);
             Route::delete('{id}', [FriendController::class, 'remove']);
         });

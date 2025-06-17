@@ -7,4 +7,4 @@ Route::get('/', function () {
 });
 Route::get('/login', function () {
     return view('log'); // resources/views/log.blade.php
-})->middleware('web');
+})->name('login');

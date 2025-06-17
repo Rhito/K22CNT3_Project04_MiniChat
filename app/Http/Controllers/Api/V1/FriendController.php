@@ -75,26 +75,23 @@ class FriendController extends Controller
         return $this->success($friendship, 'Friend request accepted');
     }
 
-    // 4. Reject a friend request
-    public function rejectRequest(Request $request)
-    {
-        $request->validate([
-            'sender_id' => 'required|exists:users,id',
-        ]);
+   // 4. Reject a friend request
+   public function rejectRequest(Request $request, $id)
+   {
+       $friendship = Friendship::where('id', $id)
+           ->where('receiver_id', Auth::id())
+           ->where('status', 'pending')
+           ->first();
+        return $this->success([Auth::id(), $friendship], 'Friend request rejected');
 
-        $friendship = Friendship::where('sender_id', $request->sender_id)
-            ->where('receiver_id', Auth::id())
-            ->where('status', 'pending')
-            ->first();
+       if (!$friendship) {
+           return $this->error('Friend request not found', null, 404);
+       }
 
-        if (!$friendship) {
-            return $this->error('Friend request not found', null, 404);
-        }
+       $friendship->update(['status' => 'rejected']);
 
-        $friendship->update(['status' => 'rejected']);
-
-        return $this->success(null, 'Friend request rejected');
-    }
+       return $this->success(null, 'Friend request rejected');
+   }
 
     // 5. List all accepted friends
     public function list()
