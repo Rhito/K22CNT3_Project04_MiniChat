@@ -131,4 +131,40 @@ class FriendController extends Controller
 
         return $this->success(null, 'Friend removed successfully');
     }
+        // 7. Block a user
+        public function block($id)
+        {
+            $userId = Auth::id();
+
+            $friendship = Friendship::updateOrCreate(
+                [
+                    'sender_id' => $userId,
+                    'receiver_id' => $id,
+                ],
+                [
+                    'status' => 'blocked',
+                ]
+            );
+
+            return $this->success($friendship, 'User blocked successfully');
+        }
+
+        // 8. Unblock a user
+        public function unblock($id)
+        {
+            $userId = Auth::id();
+
+            $friendship = Friendship::where('sender_id', $userId)
+                ->where('receiver_id', $id)
+                ->where('status', 'blocked')
+                ->first();
+
+            if (!$friendship) {
+                return $this->error('Blocked user not found', null, 404);
+            }
+
+            $friendship->delete();
+
+            return $this->success(null, 'User unblocked successfully');
+        }
 }

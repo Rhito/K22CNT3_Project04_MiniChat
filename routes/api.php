@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\FriendController;
+use App\Http\Controllers\Api\V1\MessageController;
 
 // API Version 1
 Route::prefix('v1')->group(function () {
@@ -24,6 +25,23 @@ Route::prefix('v1')->group(function () {
             Route::patch('reject/{id}', [FriendController::class, 'rejectRequest']);
             Route::get('/', [FriendController::class, 'list']);
             Route::delete('{id}', [FriendController::class, 'remove']);
+            Route::post('block/{id}', [FriendController::class, 'block']);
+            Route::delete('unblock/{id}', [FriendController::class, 'unblock']);
+
         });
+
+        // Messages
+        Route::prefix('messages')->group(function(){
+            Route::post('init', [MessageController::class, 'init']);
+            Route::get('{id}', [MessageController::class, 'index']);
+            Route::post('/', [MessageController::class, 'store']);
+            Route::put('{id}', [MessageController::class, 'update']);
+            Route::delete('{id}', [MessageController::class, 'destroy']);
+            Route::post('seen/{id}', [MessageController::class, 'seen']);
+            Route::post('typing/{id}', [MessageController::class, 'typing']);
+            Route::post('upload', [MessageController::class, 'upload']);
+        });
+
     });
+
 });

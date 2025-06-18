@@ -1566,31 +1566,31 @@
     </style>
 
     <style>
-        #frame-0 .hljs-ln-line[data-line-number='526'] {
+        #frame-0 .hljs-ln-line[data-line-number='82'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-1 .hljs-ln-line[data-line-number='856'] {
+        #frame-1 .hljs-ln-line[data-line-number='46'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-2 .hljs-ln-line[data-line-number='278'] {
+        #frame-2 .hljs-ln-line[data-line-number='265'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-3 .hljs-ln-line[data-line-number='117'] {
+        #frame-3 .hljs-ln-line[data-line-number='211'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-4 .hljs-ln-line[data-line-number='104'] {
+        #frame-4 .hljs-ln-line[data-line-number='808'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-5 .hljs-ln-line[data-line-number='87'] {
+        #frame-5 .hljs-ln-line[data-line-number='169'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-6 .hljs-ln-line[data-line-number='61'] {
+        #frame-6 .hljs-ln-line[data-line-number='50'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
@@ -1598,79 +1598,79 @@
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-8 .hljs-ln-line[data-line-number='26'] {
+        #frame-8 .hljs-ln-line[data-line-number='63'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-9 .hljs-ln-line[data-line-number='169'] {
+        #frame-9 .hljs-ln-line[data-line-number='208'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-10 .hljs-ln-line[data-line-number='126'] {
+        #frame-10 .hljs-ln-line[data-line-number='26'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-11 .hljs-ln-line[data-line-number='25'] {
+        #frame-11 .hljs-ln-line[data-line-number='169'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-12 .hljs-ln-line[data-line-number='208'] {
+        #frame-12 .hljs-ln-line[data-line-number='126'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-13 .hljs-ln-line[data-line-number='126'] {
+        #frame-13 .hljs-ln-line[data-line-number='25'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-14 .hljs-ln-line[data-line-number='807'] {
+        #frame-14 .hljs-ln-line[data-line-number='208'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-15 .hljs-ln-line[data-line-number='786'] {
+        #frame-15 .hljs-ln-line[data-line-number='126'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-16 .hljs-ln-line[data-line-number='750'] {
+        #frame-16 .hljs-ln-line[data-line-number='807'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-17 .hljs-ln-line[data-line-number='739'] {
+        #frame-17 .hljs-ln-line[data-line-number='786'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-18 .hljs-ln-line[data-line-number='200'] {
+        #frame-18 .hljs-ln-line[data-line-number='750'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-19 .hljs-ln-line[data-line-number='169'] {
+        #frame-19 .hljs-ln-line[data-line-number='739'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-20 .hljs-ln-line[data-line-number='21'] {
+        #frame-20 .hljs-ln-line[data-line-number='200'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-21 .hljs-ln-line[data-line-number='31'] {
+        #frame-21 .hljs-ln-line[data-line-number='169'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-22 .hljs-ln-line[data-line-number='208'] {
+        #frame-22 .hljs-ln-line[data-line-number='21'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-23 .hljs-ln-line[data-line-number='21'] {
+        #frame-23 .hljs-ln-line[data-line-number='31'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-24 .hljs-ln-line[data-line-number='51'] {
+        #frame-24 .hljs-ln-line[data-line-number='208'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-25 .hljs-ln-line[data-line-number='208'] {
+        #frame-25 .hljs-ln-line[data-line-number='21'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-26 .hljs-ln-line[data-line-number='27'] {
+        #frame-26 .hljs-ln-line[data-line-number='51'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
@@ -1678,7 +1678,7 @@
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-28 .hljs-ln-line[data-line-number='109'] {
+        #frame-28 .hljs-ln-line[data-line-number='27'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
@@ -1686,7 +1686,7 @@
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-30 .hljs-ln-line[data-line-number='61'] {
+        #frame-30 .hljs-ln-line[data-line-number='109'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
@@ -1694,7 +1694,7 @@
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-32 .hljs-ln-line[data-line-number='58'] {
+        #frame-32 .hljs-ln-line[data-line-number='61'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
@@ -1702,7 +1702,7 @@
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-34 .hljs-ln-line[data-line-number='22'] {
+        #frame-34 .hljs-ln-line[data-line-number='58'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
@@ -1710,7 +1710,7 @@
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-36 .hljs-ln-line[data-line-number='26'] {
+        #frame-36 .hljs-ln-line[data-line-number='22'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
@@ -1718,27 +1718,35 @@
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-38 .hljs-ln-line[data-line-number='126'] {
+        #frame-38 .hljs-ln-line[data-line-number='26'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-39 .hljs-ln-line[data-line-number='175'] {
+        #frame-39 .hljs-ln-line[data-line-number='208'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-40 .hljs-ln-line[data-line-number='144'] {
+        #frame-40 .hljs-ln-line[data-line-number='126'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-41 .hljs-ln-line[data-line-number='1219'] {
+        #frame-41 .hljs-ln-line[data-line-number='175'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-42 .hljs-ln-line[data-line-number='20'] {
+        #frame-42 .hljs-ln-line[data-line-number='144'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
 
-        #frame-43 .hljs-ln-line[data-line-number='139'] {
+        #frame-43 .hljs-ln-line[data-line-number='1219'] {
+            background-color: rgba(242, 95, 95, 0.4);
+        }
+
+        #frame-44 .hljs-ln-line[data-line-number='20'] {
+            background-color: rgba(242, 95, 95, 0.4);
+        }
+
+        #frame-45 .hljs-ln-line[data-line-number='139'] {
             background-color: rgba(242, 95, 95, 0.4);
         }
     </style>
@@ -1913,22 +1921,22 @@
                             <div
                                 class="inline-block rounded-full bg-red-500/20 px-3 py-2 max-w-full text-sm font-bold leading-5 text-red-500 truncate lg:text-base dark:bg-red-500/20">
                                 <span class="hidden md:inline">
-                    Symfony\Component\Routing\Exception\RouteNotFoundException
+                    ErrorException
                 </span>
                                 <span class="md:hidden">
-                    RouteNotFoundException
+                    ErrorException
                 </span>
                             </div>
                             <div
                                 class="mt-4 text-lg font-semibold text-gray-900 break-words dark:text-white lg:text-2xl">
-                                Route [login] not defined.
+                                Undefined variable $message
                             </div>
                         </div>
 
                         <div class="hidden text-right shrink-0 md:block md:min-w-64 md:max-w-80">
                             <div>
                                 <span class="inline-block rounded-full bg-gray-200 px-3 py-2 text-sm leading-5 text-gray-900 max-w-full truncate dark:bg-gray-800 dark:text-white">
-                    GET k22cnt3_project4_minichat.test
+                    PUT k22cnt3_project4_minichat.test
                 </span>
                             </div>
                             <div class="px-4">
@@ -2002,12 +2010,12 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Routing\UrlGenerator</span>
-                                    <span class="font-mono text-xs">:526</span>
+                                    <span class="text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\app\Http\Controllers\Api\V1\MessageController.php</span>
+                                    <span class="font-mono text-xs">:82</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
-                                route
+                                update
                             </div>
                         </div>
                     </div>
@@ -2032,12 +2040,12 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php</span>
-                                    <span class="font-mono text-xs">:856</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Routing\ControllerDispatcher</span>
+                                    <span class="font-mono text-xs">:46</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
-                                route
+                                dispatch
                             </div>
                         </div>
                     </div>
@@ -2062,12 +2070,12 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Foundation\Configuration\ApplicationBuilder</span>
-                                    <span class="font-mono text-xs">:278</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Routing\Route</span>
+                                    <span class="font-mono text-xs">:265</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
-                                call_user_func
+                                runController
                             </div>
                         </div>
                     </div>
@@ -2092,12 +2100,12 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Auth\Middleware\Authenticate</span>
-                                    <span class="font-mono text-xs">:117</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Routing\Route</span>
+                                    <span class="font-mono text-xs">:211</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
-                                redirectTo
+                                run
                             </div>
                         </div>
                     </div>
@@ -2122,12 +2130,12 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Auth\Middleware\Authenticate</span>
-                                    <span class="font-mono text-xs">:104</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Routing\Router</span>
+                                    <span class="font-mono text-xs">:808</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
-                                unauthenticated
+                                {closure:Illuminate\Routing\Router::runRouteWithinStack():807}
                             </div>
                         </div>
                     </div>
@@ -2152,12 +2160,12 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Auth\Middleware\Authenticate</span>
-                                    <span class="font-mono text-xs">:87</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Pipeline\Pipeline</span>
+                                    <span class="font-mono text-xs">:169</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
-                                authenticate
+                                {closure:Illuminate\Pipeline\Pipeline::prepareDestination():167}
                             </div>
                         </div>
                     </div>
@@ -2182,8 +2190,8 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Auth\Middleware\Authenticate</span>
-                                    <span class="font-mono text-xs">:61</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Routing\Middleware\SubstituteBindings</span>
+                                    <span class="font-mono text-xs">:50</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
@@ -2242,12 +2250,12 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful</span>
-                                    <span class="font-mono text-xs">:26</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Auth\Middleware\Authenticate</span>
+                                    <span class="font-mono text-xs">:63</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
-                                {closure:Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::handle():25}
+                                handle
                             </div>
                         </div>
                     </div>
@@ -2273,11 +2281,11 @@
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
                                     <span class="text-gray-900 dark:text-gray-300">Illuminate\Pipeline\Pipeline</span>
-                                    <span class="font-mono text-xs">:169</span>
+                                    <span class="font-mono text-xs">:208</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
-                                {closure:Illuminate\Pipeline\Pipeline::prepareDestination():167}
+                                {closure:{closure:Illuminate\Pipeline\Pipeline::carry():183}:184}
                             </div>
                         </div>
                     </div>
@@ -2302,12 +2310,12 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Pipeline\Pipeline</span>
-                                    <span class="font-mono text-xs">:126</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful</span>
+                                    <span class="font-mono text-xs">:26</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
-                                then
+                                {closure:Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::handle():25}
                             </div>
                         </div>
                     </div>
@@ -2332,12 +2340,12 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful</span>
-                                    <span class="font-mono text-xs">:25</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Pipeline\Pipeline</span>
+                                    <span class="font-mono text-xs">:169</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
-                                handle
+                                {closure:Illuminate\Pipeline\Pipeline::prepareDestination():167}
                             </div>
                         </div>
                     </div>
@@ -2363,11 +2371,11 @@
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
                                     <span class="text-gray-900 dark:text-gray-300">Illuminate\Pipeline\Pipeline</span>
-                                    <span class="font-mono text-xs">:208</span>
+                                    <span class="font-mono text-xs">:126</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
-                                {closure:{closure:Illuminate\Pipeline\Pipeline::carry():183}:184}
+                                then
                             </div>
                         </div>
                     </div>
@@ -2385,6 +2393,66 @@
                     <div
                         x-bind:class="
                             index === 13
+                                ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
+                                : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
+                        "
+                    >
+                        <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
+                            <div class="nowrap text-gray-900 dark:text-gray-300">
+                                <span class="inline-flex items-baseline">
+                                    <span class="text-gray-900 dark:text-gray-300">Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful</span>
+                                    <span class="font-mono text-xs">:25</span>
+                                </span>
+                            </div>
+                            <div class="text-gray-500 dark:text-gray-400">
+                                handle
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+
+                                        <div x-show="! includeVendorFrames">
+                                        </div>
+
+                                        <button
+                    class="w-full text-left dark:border-gray-900"
+                    x-show="true"
+                    @click="index = 14"
+                >
+                    <div
+                        x-bind:class="
+                            index === 14
+                                ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
+                                : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
+                        "
+                    >
+                        <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
+                            <div class="nowrap text-gray-900 dark:text-gray-300">
+                                <span class="inline-flex items-baseline">
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Pipeline\Pipeline</span>
+                                    <span class="font-mono text-xs">:208</span>
+                                </span>
+                            </div>
+                            <div class="text-gray-500 dark:text-gray-400">
+                                {closure:{closure:Illuminate\Pipeline\Pipeline::carry():183}:184}
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+
+                                        <div x-show="! includeVendorFrames">
+                                        </div>
+
+                                        <button
+                    class="w-full text-left dark:border-gray-900"
+                    x-show="true"
+                    @click="index = 15"
+                >
+                    <div
+                        x-bind:class="
+                            index === 15
                                 ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
                                 : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
                         "
@@ -2410,11 +2478,11 @@
                                         <button
                     class="w-full text-left dark:border-gray-900"
                     x-show="true"
-                    @click="index = 14"
+                    @click="index = 16"
                 >
                     <div
                         x-bind:class="
-                            index === 14
+                            index === 16
                                 ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
                                 : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
                         "
@@ -2440,11 +2508,11 @@
                                         <button
                     class="w-full text-left dark:border-gray-900"
                     x-show="true"
-                    @click="index = 15"
+                    @click="index = 17"
                 >
                     <div
                         x-bind:class="
-                            index === 15
+                            index === 17
                                 ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
                                 : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
                         "
@@ -2470,11 +2538,11 @@
                                         <button
                     class="w-full text-left dark:border-gray-900"
                     x-show="true"
-                    @click="index = 16"
+                    @click="index = 18"
                 >
                     <div
                         x-bind:class="
-                            index === 16
+                            index === 18
                                 ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
                                 : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
                         "
@@ -2500,11 +2568,11 @@
                                         <button
                     class="w-full text-left dark:border-gray-900"
                     x-show="true"
-                    @click="index = 17"
+                    @click="index = 19"
                 >
                     <div
                         x-bind:class="
-                            index === 17
+                            index === 19
                                 ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
                                 : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
                         "
@@ -2530,11 +2598,11 @@
                                         <button
                     class="w-full text-left dark:border-gray-900"
                     x-show="true"
-                    @click="index = 18"
+                    @click="index = 20"
                 >
                     <div
                         x-bind:class="
-                            index === 18
+                            index === 20
                                 ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
                                 : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
                         "
@@ -2560,11 +2628,11 @@
                                         <button
                     class="w-full text-left dark:border-gray-900"
                     x-show="true"
-                    @click="index = 19"
+                    @click="index = 21"
                 >
                     <div
                         x-bind:class="
-                            index === 19
+                            index === 21
                                 ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
                                 : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
                         "
@@ -2590,11 +2658,11 @@
                                         <button
                     class="w-full text-left dark:border-gray-900"
                     x-show="true"
-                    @click="index = 20"
+                    @click="index = 22"
                 >
                     <div
                         x-bind:class="
-                            index === 20
+                            index === 22
                                 ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
                                 : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
                         "
@@ -2608,66 +2676,6 @@
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
                                 handle
-                            </div>
-                        </div>
-                    </div>
-                </button>
-
-
-                                        <div x-show="! includeVendorFrames">
-                                        </div>
-
-                                        <button
-                    class="w-full text-left dark:border-gray-900"
-                    x-show="true"
-                    @click="index = 21"
-                >
-                    <div
-                        x-bind:class="
-                            index === 21
-                                ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
-                                : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
-                        "
-                    >
-                        <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
-                            <div class="nowrap text-gray-900 dark:text-gray-300">
-                                <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull</span>
-                                    <span class="font-mono text-xs">:31</span>
-                                </span>
-                            </div>
-                            <div class="text-gray-500 dark:text-gray-400">
-                                handle
-                            </div>
-                        </div>
-                    </div>
-                </button>
-
-
-                                        <div x-show="! includeVendorFrames">
-                                        </div>
-
-                                        <button
-                    class="w-full text-left dark:border-gray-900"
-                    x-show="true"
-                    @click="index = 22"
-                >
-                    <div
-                        x-bind:class="
-                            index === 22
-                                ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
-                                : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
-                        "
-                    >
-                        <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
-                            <div class="nowrap text-gray-900 dark:text-gray-300">
-                                <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Pipeline\Pipeline</span>
-                                    <span class="font-mono text-xs">:208</span>
-                                </span>
-                            </div>
-                            <div class="text-gray-500 dark:text-gray-400">
-                                {closure:{closure:Illuminate\Pipeline\Pipeline::carry():183}:184}
                             </div>
                         </div>
                     </div>
@@ -2692,8 +2700,8 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Foundation\Http\Middleware\TransformsRequest</span>
-                                    <span class="font-mono text-xs">:21</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull</span>
+                                    <span class="font-mono text-xs">:31</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
@@ -2722,12 +2730,12 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Foundation\Http\Middleware\TrimStrings</span>
-                                    <span class="font-mono text-xs">:51</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Pipeline\Pipeline</span>
+                                    <span class="font-mono text-xs">:208</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
-                                handle
+                                {closure:{closure:Illuminate\Pipeline\Pipeline::carry():183}:184}
                             </div>
                         </div>
                     </div>
@@ -2752,12 +2760,12 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Pipeline\Pipeline</span>
-                                    <span class="font-mono text-xs">:208</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Foundation\Http\Middleware\TransformsRequest</span>
+                                    <span class="font-mono text-xs">:21</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
-                                {closure:{closure:Illuminate\Pipeline\Pipeline::carry():183}:184}
+                                handle
                             </div>
                         </div>
                     </div>
@@ -2782,8 +2790,8 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Http\Middleware\ValidatePostSize</span>
-                                    <span class="font-mono text-xs">:27</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Foundation\Http\Middleware\TrimStrings</span>
+                                    <span class="font-mono text-xs">:51</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
@@ -2842,8 +2850,8 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance</span>
-                                    <span class="font-mono text-xs">:109</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Http\Middleware\ValidatePostSize</span>
+                                    <span class="font-mono text-xs">:27</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
@@ -2902,8 +2910,8 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Http\Middleware\HandleCors</span>
-                                    <span class="font-mono text-xs">:61</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance</span>
+                                    <span class="font-mono text-xs">:109</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
@@ -2962,8 +2970,8 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Http\Middleware\TrustProxies</span>
-                                    <span class="font-mono text-xs">:58</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Http\Middleware\HandleCors</span>
+                                    <span class="font-mono text-xs">:61</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
@@ -3022,8 +3030,8 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks</span>
-                                    <span class="font-mono text-xs">:22</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Http\Middleware\TrustProxies</span>
+                                    <span class="font-mono text-xs">:58</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
@@ -3082,8 +3090,8 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
-                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Http\Middleware\ValidatePathEncoding</span>
-                                    <span class="font-mono text-xs">:26</span>
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks</span>
+                                    <span class="font-mono text-xs">:22</span>
                                 </span>
                             </div>
                             <div class="text-gray-500 dark:text-gray-400">
@@ -3142,6 +3150,66 @@
                         <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
                             <div class="nowrap text-gray-900 dark:text-gray-300">
                                 <span class="inline-flex items-baseline">
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Http\Middleware\ValidatePathEncoding</span>
+                                    <span class="font-mono text-xs">:26</span>
+                                </span>
+                            </div>
+                            <div class="text-gray-500 dark:text-gray-400">
+                                handle
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+
+                                        <div x-show="! includeVendorFrames">
+                                        </div>
+
+                                        <button
+                    class="w-full text-left dark:border-gray-900"
+                    x-show="true"
+                    @click="index = 39"
+                >
+                    <div
+                        x-bind:class="
+                            index === 39
+                                ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
+                                : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
+                        "
+                    >
+                        <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
+                            <div class="nowrap text-gray-900 dark:text-gray-300">
+                                <span class="inline-flex items-baseline">
+                                    <span class="text-gray-900 dark:text-gray-300">Illuminate\Pipeline\Pipeline</span>
+                                    <span class="font-mono text-xs">:208</span>
+                                </span>
+                            </div>
+                            <div class="text-gray-500 dark:text-gray-400">
+                                {closure:{closure:Illuminate\Pipeline\Pipeline::carry():183}:184}
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+
+                                        <div x-show="! includeVendorFrames">
+                                        </div>
+
+                                        <button
+                    class="w-full text-left dark:border-gray-900"
+                    x-show="true"
+                    @click="index = 40"
+                >
+                    <div
+                        x-bind:class="
+                            index === 40
+                                ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
+                                : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
+                        "
+                    >
+                        <div class="scrollbar-hidden overflow-x-auto border-l-2 border-transparent p-2">
+                            <div class="nowrap text-gray-900 dark:text-gray-300">
+                                <span class="inline-flex items-baseline">
                                     <span class="text-gray-900 dark:text-gray-300">Illuminate\Pipeline\Pipeline</span>
                                     <span class="font-mono text-xs">:126</span>
                                 </span>
@@ -3160,11 +3228,11 @@
                                         <button
                     class="w-full text-left dark:border-gray-900"
                     x-show="true"
-                    @click="index = 39"
+                    @click="index = 41"
                 >
                     <div
                         x-bind:class="
-                            index === 39
+                            index === 41
                                 ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
                                 : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
                         "
@@ -3190,11 +3258,11 @@
                                         <button
                     class="w-full text-left dark:border-gray-900"
                     x-show="true"
-                    @click="index = 40"
+                    @click="index = 42"
                 >
                     <div
                         x-bind:class="
-                            index === 40
+                            index === 42
                                 ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
                                 : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
                         "
@@ -3220,11 +3288,11 @@
                                         <button
                     class="w-full text-left dark:border-gray-900"
                     x-show="true"
-                    @click="index = 41"
+                    @click="index = 43"
                 >
                     <div
                         x-bind:class="
-                            index === 41
+                            index === 43
                                 ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
                                 : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
                         "
@@ -3250,11 +3318,11 @@
                                         <button
                     class="w-full text-left dark:border-gray-900"
                     x-show="true"
-                    @click="index = 42"
+                    @click="index = 44"
                 >
                     <div
                         x-bind:class="
-                            index === 42
+                            index === 44
                                 ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
                                 : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
                         "
@@ -3283,11 +3351,11 @@
                                         <button
                     class="w-full text-left dark:border-gray-900"
                     x-show="includeVendorFrames"
-                    @click="index = 43"
+                    @click="index = 45"
                 >
                     <div
                         x-bind:class="
-                            index === 43
+                            index === 45
                                 ? 'rounded-r-md bg-gray-100 dark:bg-gray-800 border-l dark:border dark:border-gray-700 border-l-red-500 dark:border-l-red-500'
                                 : 'hover:bg-gray-100/75 dark:hover:bg-gray-800/75'
                         "
@@ -3314,9 +3382,9 @@
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php</span>
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\app\Http\Controllers\Api\V1\MessageController.php</span>
 
-                                            <span class="font-mono text-xs">:526</span>
+                                            <span class="font-mono text-xs">:82</span>
                                         </div>
                                     </div>
                                 </div>
@@ -3325,25 +3393,25 @@
                     style="display: none;"
                     id="frame-0"
                     class="language-php highlightable-code  default-highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="526"
-                    data-ln-start-from="521"
-                >        if (! is_null($this-&gt;missingNamedRouteResolver) &amp;&amp;
-            ! is_null($url = call_user_func($this-&gt;missingNamedRouteResolver, $name, $parameters, $absolute))) {
-            return $url;
+                    data-line-number="82"
+                    data-ln-start-from="77"
+                >    }
+
+    // 3. Update a message
+    public function update(Request $request, $id)
+    {
+        return $this-&gt;success([$message, $id], &#039;Message updated&#039;);
+        $message = Message::findOrFail($id);
+
+        if ($message-&gt;sender_id !== Auth::id()) {
+            return $this-&gt;error(&#039;Unauthorized&#039;, null, 403);
         }
 
-        throw new RouteNotFoundException(&quot;Route [{$name}] not defined.&quot;);
-    }
+        $request-&gt;validate([
+            &#039;content&#039; =&gt; &#039;required|string&#039;,
+        ]);
 
-    /**
-     * Get the URL for a given route instance.
-     *
-     * @param  \Illuminate\Routing\Route  $route
-     * @param  mixed  $parameters
-     * @param  bool  $absolute
-     * @return string
-     *
-     * @throws \Illuminate\Routing\Exceptions\UrlGenerationException
+        $message-&gt;update([&#039;content&#039; =&gt; $request-&gt;content]);
 </code></template></pre>
                                 </div>
                             </div>
@@ -3352,9 +3420,9 @@
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php</span>
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php</span>
 
-                                            <span class="font-mono text-xs">:856</span>
+                                            <span class="font-mono text-xs">:46</span>
                                         </div>
                                     </div>
                                 </div>
@@ -3363,25 +3431,25 @@
                     style="display: none;"
                     id="frame-1"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="856"
-                    data-ln-start-from="851"
-                >     * @param  bool  $absolute
-     * @return string
-     */
-    function route($name, $parameters = [], $absolute = true)
-    {
-        return app(&#039;url&#039;)-&gt;route($name, $parameters, $absolute);
-    }
-}
+                    data-line-number="46"
+                    data-ln-start-from="41"
+                >
+        if (method_exists($controller, &#039;callAction&#039;)) {
+            return $controller-&gt;callAction($method, $parameters);
+        }
 
-if (! function_exists(&#039;secure_asset&#039;)) {
+        return $controller-&gt;{$method}(...array_values($parameters));
+    }
+
     /**
-     * Generate an asset path for the application.
+     * Resolve the parameters for the controller.
      *
-     * @param  string  $path
-     * @return string
+     * @param  \Illuminate\Routing\Route  $route
+     * @param  mixed  $controller
+     * @param  string  $method
+     * @return array
      */
-    function secure_asset($path)
+    protected function resolveParameters(Route $route, $controller, $method)
 </code></template></pre>
                                 </div>
                             </div>
@@ -3390,9 +3458,9 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Foundation\Configuration\ApplicationBuilder.php</span>
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Routing\Route.php</span>
 
-                                            <span class="font-mono text-xs">:278</span>
+                                            <span class="font-mono text-xs">:265</span>
                                         </div>
                                     </div>
                                 </div>
@@ -3401,25 +3469,25 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                     style="display: none;"
                     id="frame-2"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="278"
-                    data-ln-start-from="273"
-                >     */
-    public function withMiddleware(?callable $callback = null)
+                    data-line-number="265"
+                    data-ln-start-from="260"
+                >     *
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+     */
+    protected function runController()
     {
-        $this-&gt;app-&gt;afterResolving(HttpKernel::class, function ($kernel) use ($callback) {
-            $middleware = (new Middleware)
-                -&gt;redirectGuestsTo(fn () =&gt; route(&#039;login&#039;));
+        return $this-&gt;controllerDispatcher()-&gt;dispatch(
+            $this, $this-&gt;getController(), $this-&gt;getControllerMethod()
+        );
+    }
 
-            if (! is_null($callback)) {
-                $callback($middleware);
-            }
-
-            $this-&gt;pageMiddleware = $middleware-&gt;getPageMiddleware();
-            $kernel-&gt;setGlobalMiddleware($middleware-&gt;getGlobalMiddleware());
-            $kernel-&gt;setMiddlewareGroups($middleware-&gt;getMiddlewareGroups());
-            $kernel-&gt;setMiddlewareAliases($middleware-&gt;getMiddlewareAliases());
-
-            if ($priorities = $middleware-&gt;getMiddlewarePriority()) {
+    /**
+     * Get the controller instance for the route.
+     *
+     * @return mixed
+     *
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     */
 </code></template></pre>
                                 </div>
                             </div>
@@ -3428,9 +3496,9 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Auth\Middleware\Authenticate.php</span>
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Routing\Route.php</span>
 
-                                            <span class="font-mono text-xs">:117</span>
+                                            <span class="font-mono text-xs">:211</span>
                                         </div>
                                     </div>
                                 </div>
@@ -3439,25 +3507,25 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                     style="display: none;"
                     id="frame-3"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="117"
-                    data-ln-start-from="112"
-                >     * @return string|null
-     */
-    protected function redirectTo(Request $request)
-    {
-        if (static::$redirectToCallback) {
-            return call_user_func(static::$redirectToCallback, $request);
+                    data-line-number="211"
+                    data-ln-start-from="206"
+                >    {
+        $this-&gt;container = $this-&gt;container ?: new Container;
+
+        try {
+            if ($this-&gt;isControllerAction()) {
+                return $this-&gt;runController();
+            }
+
+            return $this-&gt;runCallable();
+        } catch (HttpResponseException $e) {
+            return $e-&gt;getResponse();
         }
     }
 
     /**
-     * Specify the callback that should be used to generate the redirect path.
+     * Checks whether the route&#039;s action is a controller.
      *
-     * @param  callable  $redirectToCallback
-     * @return void
-     */
-    public static function redirectUsing(callable $redirectToCallback)
-    {
 </code></template></pre>
                                 </div>
                             </div>
@@ -3466,9 +3534,9 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Auth\Middleware\Authenticate.php</span>
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Routing\Router.php</span>
 
-                                            <span class="font-mono text-xs">:104</span>
+                                            <span class="font-mono text-xs">:808</span>
                                         </div>
                                     </div>
                                 </div>
@@ -3477,24 +3545,24 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                     style="display: none;"
                     id="frame-4"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="104"
-                    data-ln-start-from="99"
-                >    protected function unauthenticated($request, array $guards)
-    {
-        throw new AuthenticationException(
-            &#039;Unauthenticated.&#039;,
-            $guards,
-            $request-&gt;expectsJson() ? null : $this-&gt;redirectTo($request),
-        );
+                    data-line-number="808"
+                    data-ln-start-from="803"
+                >
+        return (new Pipeline($this-&gt;container))
+            -&gt;send($request)
+            -&gt;through($middleware)
+            -&gt;then(fn ($request) =&gt; $this-&gt;prepareResponse(
+                $request, $route-&gt;run()
+            ));
     }
 
     /**
-     * Get the path the user should be redirected to when they are not authenticated.
+     * Gather the middleware for the given route with resolved class names.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return string|null
+     * @param  \Illuminate\Routing\Route  $route
+     * @return array
      */
-    protected function redirectTo(Request $request)
+    public function gatherRouteMiddleware(Route $route)
     {
 </code></template></pre>
                                 </div>
@@ -3504,9 +3572,9 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Auth\Middleware\Authenticate.php</span>
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php</span>
 
-                                            <span class="font-mono text-xs">:87</span>
+                                            <span class="font-mono text-xs">:169</span>
                                         </div>
                                     </div>
                                 </div>
@@ -3515,24 +3583,24 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                     style="display: none;"
                     id="frame-5"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="87"
-                    data-ln-start-from="82"
-                >            if ($this-&gt;auth-&gt;guard($guard)-&gt;check()) {
-                return $this-&gt;auth-&gt;shouldUse($guard);
+                    data-line-number="169"
+                    data-ln-start-from="164"
+                >     */
+    protected function prepareDestination(Closure $destination)
+    {
+        return function ($passable) use ($destination) {
+            try {
+                return $destination($passable);
+            } catch (Throwable $e) {
+                return $this-&gt;handleException($passable, $e);
             }
-        }
-
-        $this-&gt;unauthenticated($request, $guards);
+        };
     }
 
     /**
-     * Handle an unauthenticated user.
+     * Get a Closure that represents a slice of the application onion.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  array  $guards
-     * @return never
-     *
-     * @throws \Illuminate\Auth\AuthenticationException
+     * @return \Closure
      */
 </code></template></pre>
                                 </div>
@@ -3542,9 +3610,9 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Auth\Middleware\Authenticate.php</span>
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php</span>
 
-                                            <span class="font-mono text-xs">:61</span>
+                                            <span class="font-mono text-xs">:50</span>
                                         </div>
                                     </div>
                                 </div>
@@ -3553,25 +3621,16 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                     style="display: none;"
                     id="frame-6"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="61"
-                    data-ln-start-from="56"
-                >     *
-     * @throws \Illuminate\Auth\AuthenticationException
-     */
-    public function handle($request, Closure $next, ...$guards)
-    {
-        $this-&gt;authenticate($request, $guards);
+                    data-line-number="50"
+                    data-ln-start-from="45"
+                >            }
+
+            throw $exception;
+        }
 
         return $next($request);
     }
-
-    /**
-     * Determine if the user is logged in to any of the given guards.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  array  $guards
-     * @return void
-     *
+}
 </code></template></pre>
                                 </div>
                             </div>
@@ -3618,6 +3677,82 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Auth\Middleware\Authenticate.php</span>
+
+                                            <span class="font-mono text-xs">:63</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
+                                    <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
+                    style="display: none;"
+                    id="frame-8"
+                    class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
+                    data-line-number="63"
+                    data-ln-start-from="58"
+                >     */
+    public function handle($request, Closure $next, ...$guards)
+    {
+        $this-&gt;authenticate($request, $guards);
+
+        return $next($request);
+    }
+
+    /**
+     * Determine if the user is logged in to any of the given guards.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  array  $guards
+     * @return void
+     *
+     * @throws \Illuminate\Auth\AuthenticationException
+     */
+</code></template></pre>
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2" x-show="index === 9">
+                                <div class="mb-3">
+                                    <div class="text-md text-gray-500 dark:text-gray-400">
+                                        <div class="mb-2">
+
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php</span>
+
+                                            <span class="font-mono text-xs">:208</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
+                                    <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
+                    style="display: none;"
+                    id="frame-9"
+                    class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
+                    data-line-number="208"
+                    data-ln-start-from="203"
+                >                        // since the object we&#039;re given was already a fully instantiated object.
+                        $parameters = [$passable, $stack];
+                    }
+
+                    $carry = method_exists($pipe, $this-&gt;method)
+                        ? $pipe-&gt;{$this-&gt;method}(...$parameters)
+                        : $pipe(...$parameters);
+
+                    return $this-&gt;handleCarry($carry);
+                } catch (Throwable $e) {
+                    return $this-&gt;handleException($passable, $e);
+                }
+            };
+        };
+    }
+
+    /**
+</code></template></pre>
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2" x-show="index === 10">
+                                <div class="mb-3">
+                                    <div class="text-md text-gray-500 dark:text-gray-400">
+                                        <div class="mb-2">
+
                                             <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php</span>
 
                                             <span class="font-mono text-xs">:26</span>
@@ -3627,7 +3762,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-8"
+                    id="frame-10"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="26"
                     data-ln-start-from="21"
@@ -3651,7 +3786,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 9">
+                            <div class="sm:col-span-2" x-show="index === 11">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -3665,7 +3800,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-9"
+                    id="frame-11"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="169"
                     data-ln-start-from="164"
@@ -3689,7 +3824,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 10">
+                            <div class="sm:col-span-2" x-show="index === 12">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -3703,7 +3838,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-10"
+                    id="frame-12"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="126"
                     data-ln-start-from="121"
@@ -3727,7 +3862,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 11">
+                            <div class="sm:col-span-2" x-show="index === 13">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -3741,7 +3876,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-11"
+                    id="frame-13"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="25"
                     data-ln-start-from="20"
@@ -3765,7 +3900,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 12">
+                            <div class="sm:col-span-2" x-show="index === 14">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -3779,7 +3914,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-12"
+                    id="frame-14"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="208"
                     data-ln-start-from="203"
@@ -3803,7 +3938,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 13">
+                            <div class="sm:col-span-2" x-show="index === 15">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -3817,7 +3952,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-13"
+                    id="frame-15"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="126"
                     data-ln-start-from="121"
@@ -3841,7 +3976,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 14">
+                            <div class="sm:col-span-2" x-show="index === 16">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -3855,7 +3990,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-14"
+                    id="frame-16"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="807"
                     data-ln-start-from="802"
@@ -3879,7 +4014,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 15">
+                            <div class="sm:col-span-2" x-show="index === 17">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -3893,7 +4028,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-15"
+                    id="frame-17"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="786"
                     data-ln-start-from="781"
@@ -3917,7 +4052,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 16">
+                            <div class="sm:col-span-2" x-show="index === 18">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -3931,7 +4066,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-16"
+                    id="frame-18"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="750"
                     data-ln-start-from="745"
@@ -3955,7 +4090,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 17">
+                            <div class="sm:col-span-2" x-show="index === 19">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -3969,7 +4104,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-17"
+                    id="frame-19"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="739"
                     data-ln-start-from="734"
@@ -3993,7 +4128,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 18">
+                            <div class="sm:col-span-2" x-show="index === 20">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -4007,7 +4142,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-18"
+                    id="frame-20"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="200"
                     data-ln-start-from="195"
@@ -4031,7 +4166,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 19">
+                            <div class="sm:col-span-2" x-show="index === 21">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -4045,7 +4180,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-19"
+                    id="frame-21"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="169"
                     data-ln-start-from="164"
@@ -4069,7 +4204,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 20">
+                            <div class="sm:col-span-2" x-show="index === 22">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -4083,7 +4218,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-20"
+                    id="frame-22"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="21"
                     data-ln-start-from="16"
@@ -4107,7 +4242,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 21">
+                            <div class="sm:col-span-2" x-show="index === 23">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -4121,7 +4256,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-21"
+                    id="frame-23"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="31"
                     data-ln-start-from="26"
@@ -4145,7 +4280,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 22">
+                            <div class="sm:col-span-2" x-show="index === 24">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -4159,7 +4294,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-22"
+                    id="frame-24"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="208"
                     data-ln-start-from="203"
@@ -4183,7 +4318,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 23">
+                            <div class="sm:col-span-2" x-show="index === 25">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -4197,7 +4332,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-23"
+                    id="frame-25"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="21"
                     data-ln-start-from="16"
@@ -4221,7 +4356,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 24">
+                            <div class="sm:col-span-2" x-show="index === 26">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -4235,7 +4370,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-24"
+                    id="frame-26"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="51"
                     data-ln-start-from="46"
@@ -4256,82 +4391,6 @@ if (! function_exists(&#039;secure_asset&#039;)) {
      */
     protected function transform($key, $value)
     {
-</code></template></pre>
-                                </div>
-                            </div>
-                            <div class="sm:col-span-2" x-show="index === 25">
-                                <div class="mb-3">
-                                    <div class="text-md text-gray-500 dark:text-gray-400">
-                                        <div class="mb-2">
-
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php</span>
-
-                                            <span class="font-mono text-xs">:208</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
-                                    <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
-                    style="display: none;"
-                    id="frame-25"
-                    class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="208"
-                    data-ln-start-from="203"
-                >                        // since the object we&#039;re given was already a fully instantiated object.
-                        $parameters = [$passable, $stack];
-                    }
-
-                    $carry = method_exists($pipe, $this-&gt;method)
-                        ? $pipe-&gt;{$this-&gt;method}(...$parameters)
-                        : $pipe(...$parameters);
-
-                    return $this-&gt;handleCarry($carry);
-                } catch (Throwable $e) {
-                    return $this-&gt;handleException($passable, $e);
-                }
-            };
-        };
-    }
-
-    /**
-</code></template></pre>
-                                </div>
-                            </div>
-                            <div class="sm:col-span-2" x-show="index === 26">
-                                <div class="mb-3">
-                                    <div class="text-md text-gray-500 dark:text-gray-400">
-                                        <div class="mb-2">
-
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Http\Middleware\ValidatePostSize.php</span>
-
-                                            <span class="font-mono text-xs">:27</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
-                                    <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
-                    style="display: none;"
-                    id="frame-26"
-                    class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="27"
-                    data-ln-start-from="22"
-                >
-        if ($max &gt; 0 &amp;&amp; $request-&gt;server(&#039;CONTENT_LENGTH&#039;) &gt; $max) {
-            throw new PostTooLargeException(&#039;The POST data is too large.&#039;);
-        }
-
-        return $next($request);
-    }
-
-    /**
-     * Determine the server &#039;post_max_size&#039; as bytes.
-     *
-     * @return int
-     */
-    protected function getPostMaxSize()
-    {
-        if (is_numeric($postMaxSize = ini_get(&#039;post_max_size&#039;))) {
-            return (int) $postMaxSize;
 </code></template></pre>
                                 </div>
                             </div>
@@ -4378,9 +4437,9 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php</span>
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Http\Middleware\ValidatePostSize.php</span>
 
-                                            <span class="font-mono text-xs">:109</span>
+                                            <span class="font-mono text-xs">:27</span>
                                         </div>
                                     </div>
                                 </div>
@@ -4389,25 +4448,25 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                     style="display: none;"
                     id="frame-28"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="109"
-                    data-ln-start-from="104"
-                >                null,
-                $this-&gt;getHeaders($data)
-            );
+                    data-line-number="27"
+                    data-ln-start-from="22"
+                >
+        if ($max &gt; 0 &amp;&amp; $request-&gt;server(&#039;CONTENT_LENGTH&#039;) &gt; $max) {
+            throw new PostTooLargeException(&#039;The POST data is too large.&#039;);
         }
 
         return $next($request);
     }
 
     /**
-     * Determine if the incoming request has a maintenance mode bypass cookie.
+     * Determine the server &#039;post_max_size&#039; as bytes.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  array  $data
-     * @return bool
+     * @return int
      */
-    protected function hasValidBypassCookie($request, array $data)
+    protected function getPostMaxSize()
     {
+        if (is_numeric($postMaxSize = ini_get(&#039;post_max_size&#039;))) {
+            return (int) $postMaxSize;
 </code></template></pre>
                                 </div>
                             </div>
@@ -4454,9 +4513,9 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php</span>
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php</span>
 
-                                            <span class="font-mono text-xs">:61</span>
+                                            <span class="font-mono text-xs">:109</span>
                                         </div>
                                     </div>
                                 </div>
@@ -4465,25 +4524,25 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                     style="display: none;"
                     id="frame-30"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="61"
-                    data-ln-start-from="56"
-                >            $this-&gt;cors-&gt;varyHeader($response, &#039;Access-Control-Request-Method&#039;);
-
-            return $response;
+                    data-line-number="109"
+                    data-ln-start-from="104"
+                >                null,
+                $this-&gt;getHeaders($data)
+            );
         }
 
-        $response = $next($request);
-
-        if ($request-&gt;getMethod() === &#039;OPTIONS&#039;) {
-            $this-&gt;cors-&gt;varyHeader($response, &#039;Access-Control-Request-Method&#039;);
-        }
-
-        return $this-&gt;cors-&gt;addActualRequestHeaders($response, $request);
+        return $next($request);
     }
 
     /**
-     * Get the path from the configuration to determine if the CORS service should run.
+     * Determine if the incoming request has a maintenance mode bypass cookie.
      *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  array  $data
+     * @return bool
+     */
+    protected function hasValidBypassCookie($request, array $data)
+    {
 </code></template></pre>
                                 </div>
                             </div>
@@ -4530,9 +4589,9 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php</span>
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php</span>
 
-                                            <span class="font-mono text-xs">:58</span>
+                                            <span class="font-mono text-xs">:61</span>
                                         </div>
                                     </div>
                                 </div>
@@ -4541,25 +4600,25 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                     style="display: none;"
                     id="frame-32"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="58"
-                    data-ln-start-from="53"
-                >    {
-        $request::setTrustedProxies([], $this-&gt;getTrustedHeaderNames());
+                    data-line-number="61"
+                    data-ln-start-from="56"
+                >            $this-&gt;cors-&gt;varyHeader($response, &#039;Access-Control-Request-Method&#039;);
 
-        $this-&gt;setTrustedProxyIpAddresses($request);
+            return $response;
+        }
 
-        return $next($request);
+        $response = $next($request);
+
+        if ($request-&gt;getMethod() === &#039;OPTIONS&#039;) {
+            $this-&gt;cors-&gt;varyHeader($response, &#039;Access-Control-Request-Method&#039;);
+        }
+
+        return $this-&gt;cors-&gt;addActualRequestHeaders($response, $request);
     }
 
     /**
-     * Sets the trusted proxies on the request.
+     * Get the path from the configuration to determine if the CORS service should run.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return void
-     */
-    protected function setTrustedProxyIpAddresses(Request $request)
-    {
-        $trustedIps = $this-&gt;proxies() ?: config(&#039;trustedproxy.proxies&#039;);
 </code></template></pre>
                                 </div>
                             </div>
@@ -4606,9 +4665,9 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks.php</span>
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php</span>
 
-                                            <span class="font-mono text-xs">:22</span>
+                                            <span class="font-mono text-xs">:58</span>
                                         </div>
                                     </div>
                                 </div>
@@ -4617,25 +4676,25 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                     style="display: none;"
                     id="frame-34"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="22"
-                    data-ln-start-from="17"
-                >     * @param  \Closure  $next
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function handle(Request $request, Closure $next)
-    {
+                    data-line-number="58"
+                    data-ln-start-from="53"
+                >    {
+        $request::setTrustedProxies([], $this-&gt;getTrustedHeaderNames());
+
+        $this-&gt;setTrustedProxyIpAddresses($request);
+
         return $next($request);
     }
 
     /**
-     * Invoke the deferred callbacks.
+     * Sets the trusted proxies on the request.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Symfony\Component\HttpFoundation\Response  $response
      * @return void
      */
-    public function terminate(Request $request, Response $response)
+    protected function setTrustedProxyIpAddresses(Request $request)
     {
+        $trustedIps = $this-&gt;proxies() ?: config(&#039;trustedproxy.proxies&#039;);
 </code></template></pre>
                                 </div>
                             </div>
@@ -4682,9 +4741,9 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
-                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Http\Middleware\ValidatePathEncoding.php</span>
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks.php</span>
 
-                                            <span class="font-mono text-xs">:26</span>
+                                            <span class="font-mono text-xs">:22</span>
                                         </div>
                                     </div>
                                 </div>
@@ -4693,16 +4752,25 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                     style="display: none;"
                     id="frame-36"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
-                    data-line-number="26"
-                    data-ln-start-from="21"
-                >
-        if (! mb_check_encoding($decodedPath, &#039;UTF-8&#039;)) {
-            throw new MalformedUrlException;
-        }
-
+                    data-line-number="22"
+                    data-ln-start-from="17"
+                >     * @param  \Closure  $next
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function handle(Request $request, Closure $next)
+    {
         return $next($request);
     }
-}
+
+    /**
+     * Invoke the deferred callbacks.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Symfony\Component\HttpFoundation\Response  $response
+     * @return void
+     */
+    public function terminate(Request $request, Response $response)
+    {
 </code></template></pre>
                                 </div>
                             </div>
@@ -4749,6 +4817,73 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
 
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Http\Middleware\ValidatePathEncoding.php</span>
+
+                                            <span class="font-mono text-xs">:26</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
+                                    <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
+                    style="display: none;"
+                    id="frame-38"
+                    class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
+                    data-line-number="26"
+                    data-ln-start-from="21"
+                >
+        if (! mb_check_encoding($decodedPath, &#039;UTF-8&#039;)) {
+            throw new MalformedUrlException;
+        }
+
+        return $next($request);
+    }
+}
+</code></template></pre>
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2" x-show="index === 39">
+                                <div class="mb-3">
+                                    <div class="text-md text-gray-500 dark:text-gray-400">
+                                        <div class="mb-2">
+
+                                            <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php</span>
+
+                                            <span class="font-mono text-xs">:208</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
+                                    <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
+                    style="display: none;"
+                    id="frame-39"
+                    class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
+                    data-line-number="208"
+                    data-ln-start-from="203"
+                >                        // since the object we&#039;re given was already a fully instantiated object.
+                        $parameters = [$passable, $stack];
+                    }
+
+                    $carry = method_exists($pipe, $this-&gt;method)
+                        ? $pipe-&gt;{$this-&gt;method}(...$parameters)
+                        : $pipe(...$parameters);
+
+                    return $this-&gt;handleCarry($carry);
+                } catch (Throwable $e) {
+                    return $this-&gt;handleException($passable, $e);
+                }
+            };
+        };
+    }
+
+    /**
+</code></template></pre>
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2" x-show="index === 40">
+                                <div class="mb-3">
+                                    <div class="text-md text-gray-500 dark:text-gray-400">
+                                        <div class="mb-2">
+
                                             <span class="wrap text-gray-900 dark:text-gray-300">C:\Users\lasng\Herd\k22cnt3_project4_minichat\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php</span>
 
                                             <span class="font-mono text-xs">:126</span>
@@ -4758,7 +4893,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-38"
+                    id="frame-40"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="126"
                     data-ln-start-from="121"
@@ -4782,7 +4917,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 39">
+                            <div class="sm:col-span-2" x-show="index === 41">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -4796,7 +4931,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-39"
+                    id="frame-41"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="175"
                     data-ln-start-from="170"
@@ -4820,7 +4955,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 40">
+                            <div class="sm:col-span-2" x-show="index === 42">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -4834,7 +4969,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-40"
+                    id="frame-42"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="144"
                     data-ln-start-from="139"
@@ -4858,7 +4993,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 41">
+                            <div class="sm:col-span-2" x-show="index === 43">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -4872,7 +5007,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-41"
+                    id="frame-43"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="1219"
                     data-ln-start-from="1214"
@@ -4896,7 +5031,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 42">
+                            <div class="sm:col-span-2" x-show="index === 44">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -4910,7 +5045,7 @@ if (! function_exists(&#039;secure_asset&#039;)) {
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-42"
+                    id="frame-44"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="20"
                     data-ln-start-from="15"
@@ -4923,7 +5058,7 @@ $app-&gt;handleRequest(Request::capture());
 </code></template></pre>
                                 </div>
                             </div>
-                            <div class="sm:col-span-2" x-show="index === 43">
+                            <div class="sm:col-span-2" x-show="index === 45">
                                 <div class="mb-3">
                                     <div class="text-md text-gray-500 dark:text-gray-400">
                                         <div class="mb-2">
@@ -4937,7 +5072,7 @@ $app-&gt;handleRequest(Request::capture());
                                 <div class="pt-4 text-sm text-gray-500 dark:text-gray-400">
                                     <pre class="h-[32.5rem] rounded-md dark:bg-gray-800 border dark:border-gray-700"><template x-if="true"><code
                     style="display: none;"
-                    id="frame-43"
+                    id="frame-45"
                     class="language-php highlightable-code  scrollbar-hidden overflow-y-hidden"
                     data-line-number="139"
                     data-ln-start-from="134"
@@ -4961,8 +5096,8 @@ require $frontControllerPath;
                     </div>
 
                     <div class="mt-2">
-                        <span>GET</span>
-                        <span class="text-gray-500">/api/v1/friends</span>
+                        <span>PUT</span>
+                        <span class="text-gray-500">/api/v1/messages/2</span>
                     </div>
 
                     <div class="mt-4">
@@ -4971,6 +5106,22 @@ require $frontControllerPath;
 
                     <dl class="mt-1 grid grid-cols-1 rounded border dark:border-gray-800">
                         <div class="flex items-center gap-2  dark:border-gray-800">
+                            <span
+                    data-tippy-content="content-length"
+                    class="lg:text-md w-[8rem] flex-none cursor-pointer truncate border-r px-5 py-3 text-sm dark:border-gray-800 lg:w-[12rem]"
+                >
+                    content-length
+                </span>
+                            <span
+                    class="min-w-0 flex-grow"
+                    style="
+                        -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 1rem, #000 calc(100% - 3rem), transparent calc(100% - 1rem));
+                    "
+                >
+                    <pre class="scrollbar-hidden overflow-y-hidden text-xs lg:text-sm"><code class="px-5 py-3 overflow-y-hidden scrollbar-hidden max-h-32 overflow-x-scroll scrollbar-hidden-x">43</code></pre>
+                </span>
+                        </div>
+                        <div class="flex items-center gap-2 border-t dark:border-gray-800">
                             <span
                     data-tippy-content="connection"
                     class="lg:text-md w-[8rem] flex-none cursor-pointer truncate border-r px-5 py-3 text-sm dark:border-gray-800 lg:w-[12rem]"
@@ -5031,7 +5182,7 @@ require $frontControllerPath;
                         -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 1rem, #000 calc(100% - 3rem), transparent calc(100% - 1rem));
                     "
                 >
-                    <pre class="scrollbar-hidden overflow-y-hidden text-xs lg:text-sm"><code class="px-5 py-3 overflow-y-hidden scrollbar-hidden max-h-32 overflow-x-scroll scrollbar-hidden-x">5534fb9b-2a62-4538-bb8d-a582928d7208</code></pre>
+                    <pre class="scrollbar-hidden overflow-y-hidden text-xs lg:text-sm"><code class="px-5 py-3 overflow-y-hidden scrollbar-hidden max-h-32 overflow-x-scroll scrollbar-hidden-x">ea33f76c-7b9d-44e7-9124-fcfc43a23ee6</code></pre>
                 </span>
                         </div>
                         <div class="flex items-center gap-2 border-t dark:border-gray-800">
@@ -5063,7 +5214,39 @@ require $frontControllerPath;
                         -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 1rem, #000 calc(100% - 3rem), transparent calc(100% - 1rem));
                     "
                 >
-                    <pre class="scrollbar-hidden overflow-y-hidden text-xs lg:text-sm"><code class="px-5 py-3 overflow-y-hidden scrollbar-hidden max-h-32 overflow-x-scroll scrollbar-hidden-x">PostmanRuntime/7.44.0</code></pre>
+                    <pre class="scrollbar-hidden overflow-y-hidden text-xs lg:text-sm"><code class="px-5 py-3 overflow-y-hidden scrollbar-hidden max-h-32 overflow-x-scroll scrollbar-hidden-x">PostmanRuntime/7.44.1</code></pre>
+                </span>
+                        </div>
+                        <div class="flex items-center gap-2 border-t dark:border-gray-800">
+                            <span
+                    data-tippy-content="content-type"
+                    class="lg:text-md w-[8rem] flex-none cursor-pointer truncate border-r px-5 py-3 text-sm dark:border-gray-800 lg:w-[12rem]"
+                >
+                    content-type
+                </span>
+                            <span
+                    class="min-w-0 flex-grow"
+                    style="
+                        -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 1rem, #000 calc(100% - 3rem), transparent calc(100% - 1rem));
+                    "
+                >
+                    <pre class="scrollbar-hidden overflow-y-hidden text-xs lg:text-sm"><code class="px-5 py-3 overflow-y-hidden scrollbar-hidden max-h-32 overflow-x-scroll scrollbar-hidden-x">text/plain</code></pre>
+                </span>
+                        </div>
+                        <div class="flex items-center gap-2 border-t dark:border-gray-800">
+                            <span
+                    data-tippy-content="authorization"
+                    class="lg:text-md w-[8rem] flex-none cursor-pointer truncate border-r px-5 py-3 text-sm dark:border-gray-800 lg:w-[12rem]"
+                >
+                    authorization
+                </span>
+                            <span
+                    class="min-w-0 flex-grow"
+                    style="
+                        -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 1rem, #000 calc(100% - 3rem), transparent calc(100% - 1rem));
+                    "
+                >
+                    <pre class="scrollbar-hidden overflow-y-hidden text-xs lg:text-sm"><code class="px-5 py-3 overflow-y-hidden scrollbar-hidden max-h-32 overflow-x-scroll scrollbar-hidden-x">Bearer mkEGpOGxninLY1wfAkasn6UYL8VBoDsZR4bI4fev3faff22f</code></pre>
                 </span>
                         </div>
                     </dl>
@@ -5106,7 +5289,7 @@ require $frontControllerPath;
                         -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 1rem, #000 calc(100% - 3rem), transparent calc(100% - 1rem));
                     "
                 >
-                    <pre class="scrollbar-hidden overflow-y-hidden text-xs lg:text-sm"><code class="px-5 py-3 overflow-y-hidden scrollbar-hidden max-h-32 overflow-x-scroll scrollbar-hidden-x">App\Http\Controllers\Api\V1\FriendController@list</code></pre>
+                    <pre class="scrollbar-hidden overflow-y-hidden text-xs lg:text-sm"><code class="px-5 py-3 overflow-y-hidden scrollbar-hidden max-h-32 overflow-x-scroll scrollbar-hidden-x">App\Http\Controllers\Api\V1\MessageController@update</code></pre>
                 </span>
                         </div>
                         <div class="flex items-center gap-2 border-t dark:border-gray-800">
@@ -5125,6 +5308,22 @@ require $frontControllerPath;
                         </div>
                     </dl>
 
+                    <div class="mt-4">
+                        <span class="text-gray-900 dark:text-white text-sm"> Routing Parameters </span>
+                    </div>
+
+                    <div class="mt-1 rounded border dark:border-gray-800">
+                        <div class="flex items-center">
+                            <span
+                    class="min-w-0 flex-grow"
+                    style="-webkit-mask-image: linear-gradient(90deg, transparent 0, #000 1rem, #000 calc(100% - 3rem), transparent calc(100% - 1rem))"
+                >
+                    <pre class="scrollbar-hidden mx-5 my-3 overflow-y-hidden text-xs lg:text-sm"><code class="overflow-y-hidden scrollbar-hidden overflow-x-scroll scrollbar-hidden-x">{
+    &quot;id&quot;: &quot;2&quot;
+}</code></pre>
+                </span>
+                        </div>
+                    </div>
 
                     <div class="mt-4">
                         <span class="font-semibold text-gray-900 dark:text-white"> Database Queries </span>
@@ -5133,12 +5332,51 @@ require $frontControllerPath;
                     </div>
 
                     <dl class="mt-1 grid grid-cols-1 rounded border dark:border-gray-800">
-                        <span
-                class="min-w-0 flex-grow"
-                style="-webkit-mask-image: linear-gradient(90deg, transparent 0, #000 1rem, #000 calc(100% - 3rem), transparent calc(100% - 1rem))"
-            >
-                <pre class="scrollbar-hidden mx-5 my-3 overflow-y-hidden text-xs lg:text-sm"><code class="overflow-y-hidden scrollbar-hidden overflow-x-scroll scrollbar-hidden-x">No query data</code></pre>
-            </span>
+                        <div class="flex items-center gap-2  dark:border-gray-800">
+                            <div
+                                class="lg:text-md w-[8rem] flex-none truncate border-r px-5 py-3 text-sm dark:border-gray-800 lg:w-[12rem]">
+                                <span>mysql</span>
+                                <span class="hidden text-xs text-gray-500 lg:inline-block">(3.13 ms)</span>
+                            </div>
+                            <span
+                    class="min-w-0 flex-grow"
+                    style="
+                        -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 1rem, #000 calc(100% - 3rem), transparent calc(100% - 1rem));
+                    "
+                >
+                    <pre class="scrollbar-hidden overflow-y-hidden text-xs lg:text-sm"><code class="px-5 py-3 overflow-y-hidden scrollbar-hidden max-h-32 overflow-x-scroll scrollbar-hidden-x">select * from `personal_access_tokens` where `token` = &#039;39988bf59fa6b96fe1f5fe3a681865c9da610027552c87b09c4cd661caa79559&#039; limit 1</code></pre>
+                </span>
+                        </div>
+                        <div class="flex items-center gap-2 border-t dark:border-gray-800">
+                            <div
+                                class="lg:text-md w-[8rem] flex-none truncate border-r px-5 py-3 text-sm dark:border-gray-800 lg:w-[12rem]">
+                                <span>mysql</span>
+                                <span class="hidden text-xs text-gray-500 lg:inline-block">(0.59 ms)</span>
+                            </div>
+                            <span
+                    class="min-w-0 flex-grow"
+                    style="
+                        -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 1rem, #000 calc(100% - 3rem), transparent calc(100% - 1rem));
+                    "
+                >
+                    <pre class="scrollbar-hidden overflow-y-hidden text-xs lg:text-sm"><code class="px-5 py-3 overflow-y-hidden scrollbar-hidden max-h-32 overflow-x-scroll scrollbar-hidden-x">select * from `users` where `users`.`id` = 12 limit 1</code></pre>
+                </span>
+                        </div>
+                        <div class="flex items-center gap-2 border-t dark:border-gray-800">
+                            <div
+                                class="lg:text-md w-[8rem] flex-none truncate border-r px-5 py-3 text-sm dark:border-gray-800 lg:w-[12rem]">
+                                <span>mysql</span>
+                                <span class="hidden text-xs text-gray-500 lg:inline-block">(6.81 ms)</span>
+                            </div>
+                            <span
+                    class="min-w-0 flex-grow"
+                    style="
+                        -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 1rem, #000 calc(100% - 3rem), transparent calc(100% - 1rem));
+                    "
+                >
+                    <pre class="scrollbar-hidden overflow-y-hidden text-xs lg:text-sm"><code class="px-5 py-3 overflow-y-hidden scrollbar-hidden max-h-32 overflow-x-scroll scrollbar-hidden-x">update `personal_access_tokens` set `last_used_at` = &#039;2025-06-18 09:02:49&#039;, `personal_access_tokens`.`updated_at` = &#039;2025-06-18 09:02:49&#039; where `id` = 47</code></pre>
+                </span>
+                        </div>
                     </dl>
                 </section>
             </div>

@@ -15,6 +15,7 @@ class Conversation extends Model
     protected $casts = [
         'type' => 'string', // Maps enum 'private', 'group'
         'created_at' => 'datetime',
+        'updated_at' => 'datetime',
     ];
 
     // User who created the conversation

@@ -19,4 +19,15 @@ This is a RESTful API built with Laravel 12 for a mini chat application. It supp
 
 ## 👾 End Point
 
+# Login
+
+-   POST api/v1/login
+-   Allow user can login to use the application
+-   Create Bearer token to access the application
+
+# Register
+
+# Friend list
+
 GET|HEAD api/v1/friends
+This End point allow to get list friend of Current User base on Bearer Token Created by Login
