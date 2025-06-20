@@ -12,7 +12,8 @@ class ReadReceipt extends Model
     ];
 
     protected $casts = [
-        'read_at' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
     ];
 
     // Message that was read

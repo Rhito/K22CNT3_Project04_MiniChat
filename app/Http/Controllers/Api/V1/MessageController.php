@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Conversation;
 use App\Models\Message;
 use App\Models\ReadReceipt;
+use App\Models\Friendship;
+use App\Models\Attachment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Traits\HttpResponses;
@@ -62,8 +64,30 @@ class MessageController extends Controller
             'message_type' => 'required|in:text,image,file',
         ]);
 
+
+
         $conversation = Conversation::findOrFail($request->conversation_id);
+
         $this->authorizeParticipant($conversation);
+
+        $receiverId = $conversation->participants()
+            ->where('users_id', '!=', Auth::id())
+            ->first()
+            ?->id;
+
+        $isBlocked = Friendship::where(function ($q) use ($receiverId) {
+                $q->where('sender_id', $receiverId)
+                ->where('receiver_id', Auth::id())
+                ->where('status', 'blocked');
+            })->orWhere(function ($q) use ($receiverId) {
+                $q->where('sender_id', Auth::id())
+                ->where('receiver_id', $receiverId)
+                ->where('status', 'blocked');
+            })->exists();
+
+        if ($isBlocked) {
+            return $this->error('You cannot send messages to this user.', null, 403);
+        }
 
         $message = Message::create([
             'conversation_id' => $conversation->id,
@@ -116,10 +140,7 @@ class MessageController extends Controller
         ReadReceipt::updateOrCreate(
             [
                 'messages_id' => $message->id,
-                'user_id' => Auth::id(),
-            ],
-            [
-                'seen_at' => now(),
+                'users_id' => Auth::id(),
             ]
         );
 
@@ -135,20 +156,46 @@ class MessageController extends Controller
         return $this->success(null, 'Typing event acknowledged');
     }
 
-    // 7. Upload attachment (image/file)
+    // 7. Upload attachment (image/file) many file can push to db at the same message
     public function upload(Request $request)
     {
         $request->validate([
-            'file' => 'required|file|max:10240',
+            'conversation_id' => 'required|exists:conversations,id',
+            'files' => 'required|array|min:1',
+            'files.*' => 'file|max:10240', // max per file 10MB
         ]);
 
-        $path = $request->file('file')->store('attachments', 'public');
+        $conversation = Conversation::findOrFail($request->conversation_id);
+        $this->authorizeParticipant($conversation);
+
+        // Create a message to group all the sent files.
+        $message = Message::create([
+            'conversation_id' => $conversation->id,
+            'sender_id' => Auth::id(),
+            'content' => null,
+            'message_type' => 'file',
+        ]);
+
+        $attachments = [];
+
+        foreach ($request->file('files') as $file) {
+            $path = $file->store('attachments', 'public');
+            $url = Storage::url($path);
+
+            $attachments[] = $message->attachments()->create([
+                'file_path' => $path,
+                'file_url' => $url,
+                'file_type' => $file->getMimeType(),
+            ]);
+        }
 
         return $this->success([
-            'url' => Storage::url($path),
-            'path' => $path,
-        ], 'File uploaded successfully');
+            'message' => new MessageResource($message->load('sender', 'attachments')),
+            'attachments' => $attachments,
+        ], 'Files uploaded and message created');
     }
+
+
 
     protected function authorizeParticipant(Conversation $conversation)
     {

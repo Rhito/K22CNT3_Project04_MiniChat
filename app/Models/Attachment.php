@@ -14,6 +14,7 @@ class Attachment extends Model
 
     protected $casts = [
         'created_at' => 'datetime',
+        'updated_at' => 'datetime',
     ];
 
     // Message the attachment belongs to

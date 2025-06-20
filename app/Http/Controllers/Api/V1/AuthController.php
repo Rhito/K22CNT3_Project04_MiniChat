@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 use App\Traits\HttpResponses;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\LoginUserRequest;
+use App\Http\Requests\EditUserRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+
 
 class AuthController extends Controller
 {
@@ -78,6 +81,76 @@ class AuthController extends Controller
 
     public function user(Request $request){
         return new UserResource($request->user());
+    }
+
+    public function editUser(EditUserRequest $request)
+    {
+        if(!$request->all()){
+            return $this->error('Request null!', null, 500);
+        }
+        // Lấy người dùng hiện tại
+        $user = $request->user();
+
+        // Chuẩn bị dữ liệu để cập nhật
+        $data = [];
+
+        if ($request->filled('password') || $request->filled('email')) {
+            if (!Hash::check($request->current_password, $user->password)) {
+                return $this->error('Current password is incorrect.', null, 403);
+            }
+        }
+
+        if ($request->filled('name')) {
+            $data['name'] = $request->name;
+        }
+
+        if ($request->filled('email')) {
+            $data['email'] = $request->email;
+        }
+
+        if ($request->filled('password')) {
+            $data['password'] = Hash::make($request->password);
+        }
+
+        // Cập nhật người dùng
+        $user->update($data);
+
+        // Trả về phản hồi
+        return $this->success([
+            'id' => $user->id,
+            'name' => $user->name,
+            'password' => $user->password,
+            'email' => $user->email,
+            'avatar' => $user->avatar ? Storage::url($user->avatar) : null,
+        ], 'User updated successfully');
+    }
+
+    public function editAvatar(Request $request)
+    {
+        $request->validate([
+            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $user = $request->user();
+
+        if ($request->hasFile('avatar')) {
+            // Xóa avatar cũ nếu có
+            if ($user->avatar) {
+                Storage::disk('public')->delete($user->avatar);
+            }
+
+            // Lưu avatar mới
+            $path = $request->file('avatar')->store('avatars', 'public');
+
+            // Cập nhật
+            $user->update([
+                'avatar' => $path,
+            ]);
+        }
+
+        return $this->success([
+            'avatar' => Storage::url($user->avatar),
+        ], 'Avatar updated successfully.');
     }
 
 }
