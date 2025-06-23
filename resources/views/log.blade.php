@@ -227,14 +227,43 @@
         color: #1299DA
     }
 </style>
-<pre class=sf-dump id=sf-dump-352684026 data-indent-pad="  "><span class=sf-dump-note>array:5</span> [<samp data-depth=1 class=sf-dump-expanded><span style="color: #A0A0A0;"> // app\Http\Controllers\Api\V1\AuthController.php:88</span>
-  "<span class=sf-dump-key>name</span>" => <span class=sf-dump-const>null</span>
-  "<span class=sf-dump-key>email</span>" => <span class=sf-dump-const>null</span>
-  "<span class=sf-dump-key>password</span>" => "<span class=sf-dump-str title="11 characters">password123</span>"
-  "<span class=sf-dump-key>password_confirmation</span>" => "<span class=sf-dump-str title="11 characters">password123</span>"
-  "<span class=sf-dump-key>current_password</span>" => "<span class=sf-dump-str title="12 characters">password1231</span>"
+<pre class=sf-dump id=sf-dump-1001100189 data-indent-pad="  "><span class=sf-dump-note>array:3</span> [<samp data-depth=1 class=sf-dump-expanded><span style="color: #A0A0A0;"> // app\Http\Controllers\Api\V1\GroupController.php:103</span>
+  "<span class=sf-dump-key>title</span>" => "<span class=sf-dump-str title="16 characters">Chat Group test3</span>"
+  "<span class=sf-dump-key>_method</span>" => "<span class=sf-dump-str title="3 characters">PUT</span>"
+  "<span class=sf-dump-key>avatar</span>" => <span class="sf-dump-note sf-dump-ellipsization" title="Illuminate\Http\UploadedFile
+"><span class="sf-dump-ellipsis sf-dump-ellipsis-note">Illuminate\Http</span><span class="sf-dump-ellipsis sf-dump-ellipsis-note">\</span><span class="sf-dump-ellipsis-tail">UploadedFile</span></span> {<a class=sf-dump-ref>#1311</a><samp data-depth=2 class=sf-dump-compact>
+    -<span class=sf-dump-private title="Private property defined in class:&#10;`Symfony\Component\HttpFoundation\File\UploadedFile`">originalName</span>: "<span class=sf-dump-str title="24 characters">FB_IMG_1696763521991.jpg</span>"
+    -<span class=sf-dump-private title="Private property defined in class:&#10;`Symfony\Component\HttpFoundation\File\UploadedFile`">mimeType</span>: "<span class=sf-dump-str title="19 characters">multipart/form-data</span>"
+    -<span class=sf-dump-private title="Private property defined in class:&#10;`Symfony\Component\HttpFoundation\File\UploadedFile`">error</span>: <span class=sf-dump-num>0</span>
+    -<span class=sf-dump-private title="Private property defined in class:&#10;`Symfony\Component\HttpFoundation\File\UploadedFile`">originalPath</span>: "<span class=sf-dump-str title="24 characters">FB_IMG_1696763521991.jpg</span>"
+    -<span class=sf-dump-private title="Private property defined in class:&#10;`Symfony\Component\HttpFoundation\File\UploadedFile`">test</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title="Protected property">hashName</span>: <span class=sf-dump-const>null</span>
+    <span class=sf-dump-meta>path</span>: "<span class=sf-dump-str title="33 characters">C:\Users\lasng\AppData\Local\Temp</span>"
+    <span class=sf-dump-meta>filename</span>: "<span class=sf-dump-str title="11 characters">phpFFB1.tmp</span>"
+    <span class=sf-dump-meta>basename</span>: "<span class=sf-dump-str title="11 characters">phpFFB1.tmp</span>"
+    <span class=sf-dump-meta>pathname</span>: "<span class=sf-dump-str title="45 characters">C:\Users\lasng\AppData\Local\Temp\phpFFB1.tmp</span>"
+    <span class=sf-dump-meta>extension</span>: "<span class=sf-dump-str title="3 characters">tmp</span>"
+    <span class=sf-dump-meta>realPath</span>: "<span class="sf-dump-str sf-dump-ellipsization" title="C:\Users\lasng\AppData\Local\Temp\phpFFB1.tmp
+45 characters"><span class="sf-dump-ellipsis sf-dump-ellipsis-path">C:\Users\lasng\AppData\Local</span><span class="sf-dump-ellipsis sf-dump-ellipsis-path">\</span><span class="sf-dump-ellipsis-tail">Temp\phpFFB1.tmp</span></span>"
+    <span class=sf-dump-meta>aTime</span>: <span class=sf-dump-const title="1750647767">2025-06-23 03:02:47</span>
+    <span class=sf-dump-meta>mTime</span>: <span class=sf-dump-const title="1750647767">2025-06-23 03:02:47</span>
+    <span class=sf-dump-meta>cTime</span>: <span class=sf-dump-const title="1750647767">2025-06-23 03:02:47</span>
+    <span class=sf-dump-meta>inode</span>: <span class=sf-dump-num>11258999068473593</span>
+    <span class=sf-dump-meta>size</span>: <span class=sf-dump-num>31199</span>
+    <span class=sf-dump-meta>perms</span>: <span class=sf-dump-const title="33206">0100666</span>
+    <span class=sf-dump-meta>owner</span>: <span class=sf-dump-num>0</span>
+    <span class=sf-dump-meta>group</span>: <span class=sf-dump-num>0</span>
+    <span class=sf-dump-meta>type</span>: "<span class=sf-dump-str title="4 characters">file</span>"
+    <span class=sf-dump-meta>writable</span>: <span class=sf-dump-const>true</span>
+    <span class=sf-dump-meta>readable</span>: <span class=sf-dump-const>true</span>
+    <span class=sf-dump-meta>executable</span>: <span class=sf-dump-const>false</span>
+    <span class=sf-dump-meta>file</span>: <span class=sf-dump-const>true</span>
+    <span class=sf-dump-meta>dir</span>: <span class=sf-dump-const>false</span>
+    <span class=sf-dump-meta>link</span>: <span class=sf-dump-const>false</span>
+    <span class=sf-dump-meta>linkTarget</span>: "<span class=sf-dump-str title="45 characters">C:\Users\lasng\AppData\Local\Temp\phpFFB1.tmp</span>"
+  </samp>}
 </samp>]
 </pre>
 <script>
-    Sfdump("sf-dump-352684026")
+    Sfdump("sf-dump-1001100189")
 </script>

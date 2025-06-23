@@ -9,6 +9,7 @@ class Conversation extends Model
     protected $fillable = [
         'title',
         'type',
+        'avatar',
         'created_by',
     ];
 

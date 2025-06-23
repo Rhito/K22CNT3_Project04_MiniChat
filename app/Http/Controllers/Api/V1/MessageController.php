@@ -64,8 +64,6 @@ class MessageController extends Controller
             'message_type' => 'required|in:text,image,file',
         ]);
 
-
-
         $conversation = Conversation::findOrFail($request->conversation_id);
 
         $this->authorizeParticipant($conversation);

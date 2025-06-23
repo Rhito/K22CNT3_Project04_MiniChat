@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\FriendController;
 use App\Http\Controllers\Api\V1\MessageController;
+use App\Http\Controllers\Api\V1\GroupController;
 
 // API Version 1
 Route::prefix('v1')->group(function () {
@@ -17,7 +18,7 @@ Route::prefix('v1')->group(function () {
         Route::post('/logout', [AuthController::class, 'logout'])->name('v1.logout');
         Route::get('/user', [AuthController::class, 'user'])->name('v1.user');
         Route::patch('/user', [AuthController::class, 'editUser'])->name('v1.editUser');
-        Route::patch('/user/avater', [AuthController::class, 'editAvatar'])->name('v1.editAvatar');
+        Route::post('/user/avatar', [AuthController::class, 'editAvatar'])->name('v1.editAvatar');
 
 
         // FRIENDS ENDPOINT
@@ -75,6 +76,14 @@ Route::prefix('v1')->group(function () {
             Route::post('upload', [MessageController::class, 'upload']);
         });
 
+        // Group
+        Route::prefix('groups')->group(function(){
+            Route::post('init', [GroupController::class, 'store']); // Tạo nhóm
+            Route::get('/', [GroupController::class, 'index']); // xem danh sach nhom
+            Route::patch('{id}', [GroupController::class, 'update']); // Cập nhật nhóm
+            Route::post('{id}/members', [GroupController::class, 'addMembers']); // Thêm thành viên
+            Route::delete('{id}/leave', [GroupController::class, 'leaveGroup']); // Rời nhóm
+        });
     });
 
 });

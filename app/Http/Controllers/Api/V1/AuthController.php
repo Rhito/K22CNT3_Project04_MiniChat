@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
@@ -112,45 +112,36 @@ class AuthController extends Controller
             $data['password'] = Hash::make($request->password);
         }
 
-        // Cập nhật người dùng
-        $user->update($data);
-
-        // Trả về phản hồi
-        return $this->success([
-            'id' => $user->id,
-            'name' => $user->name,
-            'password' => $user->password,
-            'email' => $user->email,
-            'avatar' => $user->avatar ? Storage::url($user->avatar) : null,
-        ], 'User updated successfully');
-    }
-
-    public function editAvatar(Request $request)
-    {
-        $request->validate([
-            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
-
-        $user = $request->user();
-
         if ($request->hasFile('avatar')) {
             // Xóa avatar cũ nếu có
             if ($user->avatar) {
                 Storage::disk('public')->delete($user->avatar);
             }
-
             // Lưu avatar mới
             $path = $request->file('avatar')->store('avatars', 'public');
+            $data['avatar'] = $path;
+        }
+        DB::beginTransaction();
+        try {
+            // Cập nhật người dùng
+            $user->update($data);
+            DB::commit();
 
-            // Cập nhật
-            $user->update([
-                'avatar' => $path,
-            ]);
+            // Trả về phản hồi
+            return $this->success([
+                'id' => $user->id,
+                'name' => $user->name,
+                'password' => $user->password,
+                'email' => $user->email,
+                'avatar' => $user->avatar ? Storage::url($user->avatar) : null,
+            ], 'User updated successfully');
+        }
+        catch(\Throwable $e){
+            DB::rollback();
+            return $this->error('Failed to update user: ' . $e->getMessage(), null, 500);
         }
 
-        return $this->success([
-            'avatar' => Storage::url($user->avatar),
-        ], 'Avatar updated successfully.');
+
     }
 
 }
