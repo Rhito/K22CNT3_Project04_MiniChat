@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\FriendController;
 use App\Http\Controllers\Api\V1\MessageController;
 use App\Http\Controllers\Api\V1\GroupController;
+use App\Http\Controllers\Api\V1\ConversationController;
 
 // API Version 1
 Route::prefix('v1')->group(function () {
@@ -20,7 +21,7 @@ Route::prefix('v1')->group(function () {
         Route::patch('/user', [AuthController::class, 'editUser'])->name('v1.editUser');
         Route::post('/user/avatar', [AuthController::class, 'editAvatar'])->name('v1.editAvatar');
 
-
+        Route::get('/conversation', [ConversationController::class, 'getAll']);
         // FRIENDS ENDPOINT
         Route::prefix('friends')->group(function () {
             // send a friend request
@@ -48,7 +49,7 @@ Route::prefix('v1')->group(function () {
             Route::delete('unblock/{id}', [FriendController::class, 'unblock']);
 
             // Search friend
-            Route::post('search',  [FriendController::class, 'search']);
+            Route::post('search', [FriendController::class, 'search']);
         });
 
         // Messages
