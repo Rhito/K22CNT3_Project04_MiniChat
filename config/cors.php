@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://localhost:5173'],
+    'allowed_origins' => ['http://localhost:5173', 'http://26.21.2.1:5173/', 'http://192.168.1.74:5173/'],
 
     'allowed_origins_patterns' => [],
 

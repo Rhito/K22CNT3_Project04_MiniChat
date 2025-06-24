@@ -8,17 +8,18 @@ use App\Models\Message;
 use App\Models\ReadReceipt;
 use App\Models\Friendship;
 use App\Models\Attachment;
+use App\Models\DeletedMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Traits\HttpResponses;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Resources\MessageResource;
+use App\Events\MessageSent;
 
 class MessageController extends Controller
 {
     use HttpResponses;
 
-    // 0. Init or get private conversation between two users
     public function init(Request $request)
     {
         $request->validate([
@@ -44,18 +45,27 @@ class MessageController extends Controller
         return $this->success($conversation->load('participants'), 'Conversation initialized');
     }
 
-    // 1. Get messages in a conversation
     public function index($id)
     {
         $conversation = Conversation::findOrFail($id);
         $this->authorizeParticipant($conversation);
 
-        $messages = $conversation->messages()->with('sender')->latest()->paginate(30);
+        $userId = Auth::id();
+        $messages = $conversation->messages()
+        ->with('sender')
+        ->whereDoesntHave('deletedBy', fn($q) => $q->where('users_id', $userId))
+        ->latest()
+        ->paginate(30)
+        ->through(function ($message) {
+            if ($message->is_deleted) {
+                $message->content = 'Message has removed.';
+            }
+            return $message;
+        });
 
         return $this->success(MessageResource::collection($messages), 'Messages retrieved successfully');
     }
 
-    // 2. Store new message
     public function store(Request $request)
     {
         $request->validate([
@@ -65,7 +75,6 @@ class MessageController extends Controller
         ]);
 
         $conversation = Conversation::findOrFail($request->conversation_id);
-
         $this->authorizeParticipant($conversation);
 
         $receiverId = $conversation->participants()
@@ -75,12 +84,12 @@ class MessageController extends Controller
 
         $isBlocked = Friendship::where(function ($q) use ($receiverId) {
                 $q->where('sender_id', $receiverId)
-                ->where('receiver_id', Auth::id())
-                ->where('status', 'blocked');
+                  ->where('receiver_id', Auth::id())
+                  ->where('status', 'blocked');
             })->orWhere(function ($q) use ($receiverId) {
                 $q->where('sender_id', Auth::id())
-                ->where('receiver_id', $receiverId)
-                ->where('status', 'blocked');
+                  ->where('receiver_id', $receiverId)
+                  ->where('status', 'blocked');
             })->exists();
 
         if ($isBlocked) {
@@ -94,10 +103,11 @@ class MessageController extends Controller
             'message_type' => $request->message_type,
         ]);
 
+        event(new MessageSent($message));
         return $this->success(new MessageResource($message->load('sender')), 'Message sent successfully');
+
     }
 
-    // 3. Update a message
     public function update(Request $request, $id)
     {
         $message = Message::findOrFail($id);
@@ -115,37 +125,71 @@ class MessageController extends Controller
         return $this->success(new MessageResource($message), 'Message updated');
     }
 
-    // 4. Delete a message
     public function destroy($id)
     {
-        $message = Message::findOrFail($id);
+        $message = Message::with('attachments')->findOrFail($id);
 
         if ($message->sender_id !== Auth::id()) {
             return $this->error('Unauthorized', null, 403);
         }
 
-        $message->delete();
+        // Nếu là tin nhắn file hoặc image → xoá file vật lý và DB record
+        if (in_array($message->message_type, ['file', 'image'])) {
+            foreach ($message->attachments as $attachment) {
+                if ($attachment->file_path && Storage::disk('public')->exists($attachment->file_path)) {
+                    Storage::disk('public')->delete($attachment->file_path);
+                }
+                $attachment->delete(); // Xoá DB
+            }
+        }
 
-        return $this->success(null, 'Message deleted');
+        // Soft delete message
+        $message->update([
+            'is_deleted' => true,
+            'deleted_by' => Auth::id(),
+            'deleted_at' => now(),
+        ]);
+
+        return $this->success(new MessageResource($message->load('sender')), 'Message and attachments deleted');
     }
 
-    // 5. Mark message as seen
+
+    public function hide($id)
+    {
+        $message = Message::findOrFail($id);
+        $userId = Auth::id();
+
+        // Nếu đã ẩn rồi thì bỏ qua
+        $already = DeletedMessage::where('messages_id', $message->id)
+            ->where('users_id', $userId)
+            ->exists();
+
+        if ($already) {
+            return $this->success(null, 'Message already hidden');
+        }
+
+        DeletedMessage::create([
+            'messages_id' => $message->id,
+            'users_id' => $userId,
+            'deleted_at' => Carbon::now(),
+        ]);
+
+        return $this->success(null, 'Message hidden for you');
+    }
+
+
     public function seen($id)
     {
         $message = Message::findOrFail($id);
 
-        // Store per-user read receipt instead of just updating message
-        ReadReceipt::updateOrCreate(
-            [
-                'messages_id' => $message->id,
-                'users_id' => Auth::id(),
-            ]
-        );
+        ReadReceipt::updateOrCreate([
+            'messages_id' => $message->id,
+            'users_id' => Auth::id(),
+        ]);
 
         return $this->success(new MessageResource($message), 'Message marked as seen');
     }
 
-    // 6. Typing indicator (broadcast event ideally)
     public function typing($id)
     {
         $conversation = Conversation::findOrFail($id);
@@ -154,19 +198,17 @@ class MessageController extends Controller
         return $this->success(null, 'Typing event acknowledged');
     }
 
-    // 7. Upload attachment (image/file) many file can push to db at the same message
     public function upload(Request $request)
     {
         $request->validate([
             'conversation_id' => 'required|exists:conversations,id',
             'files' => 'required|array|min:1',
-            'files.*' => 'file|max:10240', // max per file 10MB
+            'files.*' => 'file|max:10240',
         ]);
 
         $conversation = Conversation::findOrFail($request->conversation_id);
         $this->authorizeParticipant($conversation);
 
-        // Create a message to group all the sent files.
         $message = Message::create([
             'conversation_id' => $conversation->id,
             'sender_id' => Auth::id(),
@@ -193,7 +235,28 @@ class MessageController extends Controller
         ], 'Files uploaded and message created');
     }
 
+    public function search(Request $request)
+    {
+        $request->validate([
+            'conversation_id' => 'required|exists:conversations,id',
+            'keyword' => 'required|string|max:255',
+        ]);
 
+        $conversation = Conversation::findOrFail($request->conversation_id);
+        $this->authorizeParticipant($conversation);
+
+        $keyword = $request->keyword;
+        $userId = Auth::id();
+
+        $messages = Message::where('conversation_id', $conversation->id)
+            ->where('content', 'like', "%{$keyword}%")
+            ->whereDoesntHave('deletedBy', fn($q) => $q->where('users_id', $userId))
+            ->with('sender')
+            ->latest()
+            ->paginate(30);
+
+        return $this->success(MessageResource::collection($messages), 'Search results retrieved');
+    }
 
     protected function authorizeParticipant(Conversation $conversation)
     {

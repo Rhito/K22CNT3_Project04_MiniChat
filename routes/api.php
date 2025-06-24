@@ -47,6 +47,8 @@ Route::prefix('v1')->group(function () {
             // unblock a friend
             Route::delete('unblock/{id}', [FriendController::class, 'unblock']);
 
+            // Search friend
+            Route::post('search',  [FriendController::class, 'search']);
         });
 
         // Messages
@@ -74,15 +76,23 @@ Route::prefix('v1')->group(function () {
 
             // Upload file
             Route::post('upload', [MessageController::class, 'upload']);
+
+            // Search Mesage
+            Route::post('search', [MessageController::class, 'search']);
         });
 
         // Group
         Route::prefix('groups')->group(function(){
             Route::post('init', [GroupController::class, 'store']); // Tạo nhóm
             Route::get('/', [GroupController::class, 'index']); // xem danh sach nhom
+            Route::get('/{id}/gr', [GroupController::class, 'showGroup']); // xem nhom
             Route::patch('{id}', [GroupController::class, 'update']); // Cập nhật nhóm
             Route::post('{id}/members', [GroupController::class, 'addMembers']); // Thêm thành viên
             Route::delete('{id}/leave', [GroupController::class, 'leaveGroup']); // Rời nhóm
+
+            Route::post('{id}/transfer-admin', [GroupController::class, 'transferAdmin']);
+            Route::delete('{id}/kick-member', [GroupController::class, 'kickMember']);
+            Route::post('search',[GroupController::class, 'search']);
         });
     });
 

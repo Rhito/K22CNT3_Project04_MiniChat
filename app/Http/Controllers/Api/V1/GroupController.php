@@ -82,11 +82,27 @@ class GroupController extends Controller
 
         $groups = $user->conversations()
             ->where('type', 'group')
-            ->with(['participants:id,name,email,avatar'])
+            //->with(['participants:id,name,email,avatar'])
             ->latest('updated_at')
             ->get();
 
         return $this->success($groups, 'Group list retrieved.');
+    }
+
+    public function showGroup($id)
+    {
+        $user = Auth::user();
+        $group = Conversation::findOrFail($id);
+
+        // Kiểm tra người dùng có thuộc nhóm không
+        if (!$group->participants()->where('users_id', $user->id)->exists()) {
+            return $this->error('You are not a member of this group.', null, 403);
+        }
+
+        // Load thêm thông tin thành viên
+        $group->load('participants:id,name,email,avatar');
+
+        return $this->success($group, 'Current group retrieved.');
     }
 
 
@@ -126,14 +142,29 @@ class GroupController extends Controller
             'member_ids.*' => 'exists:users,id',
         ]);
 
+        $skipped = [];
+        $added = [];
+
         foreach ($request->member_ids as $memberId) {
-            $group->participants()->syncWithoutDetaching([
-                $memberId => ['role' => 'member', 'joined_at' => now()]
-            ]);
+            if (!$group->participants()->where('users_id', $memberId)->exists()) {
+                $group->participants()->attach($memberId, [
+                    'role' => 'member',
+                    'joined_at' => now(),
+                ]);
+                $added[] = $memberId;
+            } else {
+                $skipped[] = $memberId;
+            }
         }
 
-        return $this->success($group->load(), 'Members added.');
+        return $this->success([
+            'added' => $added,
+            'exists' => $skipped,
+            'participants' => $group->load('participants:id,name,email,avatar')
+        ], 'Members processed.');
+
     }
+
 
     // User leave not kicked
     public function leaveGroup($id)
@@ -218,6 +249,24 @@ class GroupController extends Controller
         return $this->success(null, 'Member kicked.');
     }
 
+    public function search(Request $request)
+    {
+        $user = Auth::user();
 
+        $request->validate([
+            'query' => 'required|string|max:255',
+        ]);
+
+        $keyword = $request->input('query');
+
+        $groups = $user->conversations()
+            ->where('type', 'group')
+            ->where('title', 'like', '%' . $keyword . '%')
+            ->with('participants:id,name,email,avatar')
+            ->orderBy('updated_at', 'desc')
+            ->get();
+
+        return $this->success($groups, 'Search results retrieved.');
+    }
 
 }

@@ -167,4 +167,27 @@ class FriendController extends Controller
 
             return $this->success(null, 'User unblocked successfully');
         }
+
+        // 9. Search user
+        public function searchUser(Request $request)
+        {
+            $request->validate([
+                'query' => 'required|string|max:255',
+            ]);
+
+            $userId = Auth::id();
+            $keyword = $request->query;
+
+            $users = User::where('id', '!=', $userId)
+                ->where(function ($q) use ($keyword) {
+                    $q->where('name', 'like', "%$keyword%")
+                      ->orWhere('email', 'like', "%$keyword%")
+                      ->orWhere('username', 'like', "%$keyword%"); // Nếu bạn có cột `username`
+                })
+                ->limit(20)
+                ->get();
+
+            return $this->success($users, 'Search result');
+        }
+
 }
