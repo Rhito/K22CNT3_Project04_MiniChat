@@ -15,7 +15,9 @@ export default function MessageActions({ messageId, onHideSuccess }: Props) {
         if (!token) return;
         try {
             await fetch(
-                `https://k22cnt3_project4_minichat.test/api/v1/messages/${messageId}/hide`,
+                `${
+                    import.meta.env.VITE_API_BASE_URL
+                }/api/v1/messages/${messageId}/hide`,
                 {
                     method: "POST",
                     headers: {
@@ -36,7 +38,9 @@ export default function MessageActions({ messageId, onHideSuccess }: Props) {
         if (!token) return;
         try {
             await fetch(
-                `https://k22cnt3_project4_minichat.test/api/v1/messages/${messageId}`,
+                `${
+                    import.meta.env.VITE_API_BASE_URL
+                }/api/v1/messages/${messageId}`,
                 {
                     method: "DELETE",
                     headers: {

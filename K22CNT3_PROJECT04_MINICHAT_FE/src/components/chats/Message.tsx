@@ -56,7 +56,7 @@ export default function MessageInput({ conversationId, onMessageSent }: Props) {
 
         try {
             const res = await axios.post(
-                "https://k22cnt3_project4_minichat.test/api/v1/messages/upload",
+                `${import.meta.env.VITE_API_BASE_URL}/api/v1/messages/upload`,
                 formData,
                 {
                     headers: {

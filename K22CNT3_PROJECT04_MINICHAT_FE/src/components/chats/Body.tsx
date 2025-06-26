@@ -4,7 +4,7 @@ import { getUserInfo } from "../../Api/loginApi";
 import echo from "../../echo/createEcho";
 import MessageActions from "./MessageActions";
 
-const BASE_URL = "https://k22cnt3_project4_minichat.test";
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 interface Attachment {
     id: number;

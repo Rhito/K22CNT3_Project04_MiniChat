@@ -57,10 +57,12 @@ export default function ChatHeader({ conversationId }: ChatHeaderProps) {
           "Người dùng";
     const avatar = isGroup
         ? conversation.avatar
-            ? `https://k22cnt3_project4_minichat.test/storage/${conversation.avatar}`
+            ? `${import.meta.env.VITE_API_BASE_URL}/storage/${
+                  conversation.avatar
+              }`
             : "/group-avatar.png"
         : conversation.participants.find((p) => p.id !== myId)?.avatar
-        ? `https://k22cnt3_project4_minichat.test/storage/${
+        ? `${import.meta.env.VITE_API_BASE_URL}/storage/${
               conversation.participants.find((p) => p.id !== myId)?.avatar
           }`
         : "/default-avatar.png";
