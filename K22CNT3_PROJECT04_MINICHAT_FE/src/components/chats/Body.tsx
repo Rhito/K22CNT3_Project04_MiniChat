@@ -100,6 +100,12 @@ export default function ChatBody({ conversationId }: ChatBodyProps) {
         scrollToBottom();
     }, [messages]);
 
+    const handleHideMessage = (id: number) => {
+        setMessages((prev) =>
+            prev.map((m) => (m.id === id ? { ...m, is_deleted: true } : m))
+        );
+    };
+
     const renderAttachments = (attachments: Attachment[]) => {
         return attachments.map((file) => {
             const url = `${BASE_URL}${file.file_url}`;
@@ -190,14 +196,24 @@ export default function ChatBody({ conversationId }: ChatBodyProps) {
                                 }`}
                             >
                                 <div className="text-sm break-words whitespace-pre-wrap">
-                                    {msg.message_type === "text" &&
-                                        (msg.content || (
-                                            <i>(Không có nội dung)</i>
-                                        ))}
+                                    {msg.is_deleted ? (
+                                        <i className="italic text-gray-400">
+                                            (Tin nhắn đã bị xóa)
+                                        </i>
+                                    ) : (
+                                        <>
+                                            {msg.message_type === "text" &&
+                                                (msg.content || (
+                                                    <i>(Không có nội dung)</i>
+                                                ))}
 
-                                    {msg.message_type === "file" &&
-                                        msg.attachments &&
-                                        renderAttachments(msg.attachments)}
+                                            {msg.message_type === "file" &&
+                                                msg.attachments &&
+                                                renderAttachments(
+                                                    msg.attachments
+                                                )}
+                                        </>
+                                    )}
                                 </div>
 
                                 <div className="text-[11px] text-gray-300 text-right">
@@ -209,10 +225,14 @@ export default function ChatBody({ conversationId }: ChatBodyProps) {
                                     })}
                                 </div>
 
-                                {/* Nút 3 chấm cho hành động - nằm góc dưới bên trái */}
                                 {isMe && (
                                     <div className="absolute bottom-1 left-1 hidden group-hover:block">
-                                        <MessageActions messageId={msg.id} />
+                                        <MessageActions
+                                            messageId={msg.id}
+                                            onHideSuccess={() =>
+                                                handleHideMessage(msg.id)
+                                            }
+                                        />
                                     </div>
                                 )}
                             </div>
