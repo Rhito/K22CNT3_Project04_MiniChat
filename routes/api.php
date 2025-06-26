@@ -82,7 +82,7 @@ Route::prefix('v1')->group(function () {
             Route::post('search', [MessageController::class, 'search']);
 
               // Hide a message
-              Route::post('{id}/hide', [MessageController::class, 'hide']);
+              Route::post('{id}', [MessageController::class, 'hide']);
 
         });
 
