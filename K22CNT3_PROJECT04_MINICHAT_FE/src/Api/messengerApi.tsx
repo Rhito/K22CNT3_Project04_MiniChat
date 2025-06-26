@@ -1,41 +1,37 @@
 import { instance } from "./api";
 
 const messengerApi = async (
-  id: number,
-  token: string,
-  setError: (msg: string) => void,
-  setLoading: (loading: boolean) => void
+    conversationId: number,
+    token: string,
+    setError: (msg: string) => void,
+    setLoading: (loading: boolean) => void
 ) => {
-  setLoading(true);
-  setError("");
+    setLoading(true);
+    setError("");
 
-  try {
-    // Gọi CSRF cookie nếu backend yêu cầu (Laravel Sanctum)
-    await instance.get("/sanctum/csrf-cookie");
+    try {
+        // Nếu dùng Sanctum: gọi để lấy cookie trước (nếu cần)
+        await instance.get("/sanctum/csrf-cookie");
 
-    // Gọi API lấy tin nhắn
-    const res = await instance.get(`api/v1/messages/${id}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+        // Gọi API tin nhắn của cuộc trò chuyện
+        const res = await instance.get(`/api/v1/messages/${conversationId}`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: "application/json",
+            },
+        });
 
-    const rawMessages = res.data.data;
-
-    // Lọc và chuyển đổi chỉ các tin nhắn text
-    const textMessages = rawMessages
-      .filter((msg: any) => msg.message_type === "text" && msg.content)
-      .map((msg: any) => ({
-        sender: msg.sender_id.toString(),
-        text: msg.content,
-      }));
-
-    return textMessages;
-  } catch (error: any) {
-    setError(error?.response?.data?.message || "An error occurred");
-    return null;
-  } finally {
-    setLoading(false);
-  }
+        // Trả nguyên danh sách tin nhắn (không lọc)
+        return res.data.data;
+    } catch (error: any) {
+        setError(
+            error?.response?.data?.message ||
+                "Không thể tải danh sách tin nhắn."
+        );
+        return [];
+    } finally {
+        setLoading(false);
+    }
 };
+
 export default messengerApi;

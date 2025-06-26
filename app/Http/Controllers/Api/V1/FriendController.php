@@ -181,8 +181,8 @@ class FriendController extends Controller
             $users = User::where('id', '!=', $userId)
                 ->where(function ($q) use ($keyword) {
                     $q->where('name', 'like', "%$keyword%")
-                      ->orWhere('email', 'like', "%$keyword%")
-                      ->orWhere('username', 'like', "%$keyword%"); // Nếu bạn có cột `username`
+                      ->orWhere('email', 'like', "%$keyword%");
+                      //->orWhere('username', 'like', "%$keyword%"); // Nếu bạn có cột `username`
                 })
                 ->limit(20)
                 ->get();

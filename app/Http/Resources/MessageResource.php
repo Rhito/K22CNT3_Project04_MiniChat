@@ -20,6 +20,8 @@ class MessageResource extends JsonResource
             "sender_id" => $this->sender_id,
             "content" => $this->content,
             "message_type" => $this->message_type,
+            "created_at" => $this->created_at,
+            "updated_at" => $this->updated_at,
             'sender' => new UserResource($this->whenLoaded('sender')),
         ];
     }

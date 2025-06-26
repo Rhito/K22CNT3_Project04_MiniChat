@@ -55,6 +55,7 @@ class MessageController extends Controller
         ->with('sender')
         ->whereDoesntHave('deletedBy', fn($q) => $q->where('users_id', $userId))
         ->latest()
+        ->orderBy('id', 'asc')
         ->paginate(30)
         ->through(function ($message) {
             if ($message->is_deleted) {

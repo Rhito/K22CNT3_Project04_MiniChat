@@ -1,50 +1,69 @@
-import { instance } from "./api";
+import axios from "axios";
+import type { AxiosResponse, AxiosError } from "axios";
 
-export const loginApi = async (
-  email: string,
-  password: string,
-  setError: (msg: string) => void,
-  setLoading: (loading: boolean) => void,
-  navigate: (path: string) => void
-) => {
-  setLoading(true);
-  setError("");
-  try {
-    await instance.get("/sanctum/csrf-cookie");
+interface LoginCredentials {
+    email: string;
+    password: string;
+}
 
-    const response = await instance.post(
-      "/api/v1/login",
-      {
-        email,
-        password,
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    const token = response.data.data.token;
-    localStorage.setItem("token", token);
-    const userId = response.data.data.user.id;
-    localStorage.setItem("user_id", userId.toString());
-    if (response.status !== 200) {
-      setError(response.data?.message || "Login failed");
-      setLoading(false);
-      return;
+export interface User {
+    id: number;
+    name: string;
+    email: string;
+    avatar: string;
+    is_active: boolean;
+}
+
+interface LoginResponse {
+    data: {
+        user: User;
+        token: string;
+    };
+    message: string;
+}
+
+const BASE_URL = "https://k22cnt3_project4_minichat.test";
+
+// Main login function
+const login = async (credentials: LoginCredentials): Promise<LoginResponse> => {
+    try {
+        const res: AxiosResponse<LoginResponse> = await axios.post(
+            `${BASE_URL}/api/v1/login`,
+            credentials,
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+            }
+        );
+
+        const { token, user } = res.data.data;
+
+        if (token) localStorage.setItem("authToken", token);
+        if (user) localStorage.setItem("userInfo", JSON.stringify(user));
+
+        return res.data;
+    } catch (err) {
+        const axiosErr = err as AxiosError<{ message: string }>;
+        throw new Error(axiosErr.response?.data?.message ?? "Login failed.");
     }
-    console.log(response.data);
-    setLoading(false);
-    navigate("/Home");
-  } catch (error: any) {
-    console.error("Login error:", error);
-    if (error.response && error.response.data && error.response.data.message) {
-      setError(error.response.data.message);
-    } else if (error.message) {
-      setError(`Error: ${error.message}`);
-    } else {
-      setError("An unknown error occurred. Please try again.");
-    }
-    setLoading(false);
-  }
 };
+
+// Helpers
+export const getAuthToken = (): string | null =>
+    localStorage.getItem("authToken");
+
+export const getUserInfo = (): User | null => {
+    const user = localStorage.getItem("userInfo");
+    return user ? JSON.parse(user) : null;
+};
+
+export const clearAuthToken = (): void => {
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("userInfo");
+};
+
+// Exports
+export default login;
+export { login as loginApi };

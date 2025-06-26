@@ -49,7 +49,7 @@ Route::prefix('v1')->group(function () {
             Route::delete('unblock/{id}', [FriendController::class, 'unblock']);
 
             // Search friend
-            Route::post('search', [FriendController::class, 'search']);
+            Route::post('search', [FriendController::class, 'searchUser']);
         });
 
         // Messages
@@ -80,6 +80,7 @@ Route::prefix('v1')->group(function () {
 
             // Search Mesage
             Route::post('search', [MessageController::class, 'search']);
+
         });
 
         // Group
