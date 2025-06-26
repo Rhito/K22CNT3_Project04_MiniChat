@@ -52,7 +52,7 @@ class MessageController extends Controller
 
         $userId = Auth::id();
         $messages = $conversation->messages()
-        ->with('sender')
+        ->with('sender', 'attachments')
         ->whereDoesntHave('deletedBy', fn($q) => $q->where('users_id', $userId))
         ->latest()
         ->orderBy('id', 'asc')
@@ -229,7 +229,7 @@ class MessageController extends Controller
                 'file_type' => $file->getMimeType(),
             ]);
         }
-
+        broadcast(new MessageSent($message->load('sender', 'attachments')));
         return $this->success([
             'message' => new MessageResource($message->load('sender', 'attachments')),
             'attachments' => $attachments,

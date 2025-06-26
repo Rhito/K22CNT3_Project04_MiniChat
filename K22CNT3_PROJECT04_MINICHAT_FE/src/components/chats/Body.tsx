@@ -1,10 +1,20 @@
 import { useEffect, useRef, useState } from "react";
-import axios from "axios";
+import messengerApi from "../../Api/messengerApi";
 import { getUserInfo } from "../../Api/loginApi";
+import echo from "../../echo/createEcho";
+import MessageActions from "./MessageActions";
 
-const API = "https://k22cnt3_project4_minichat.test/api/v1";
+const BASE_URL = "https://k22cnt3_project4_minichat.test";
 
-type Message = {
+interface Attachment {
+    id: number;
+    message_id: number;
+    file_url: string;
+    file_path: string;
+    file_type: string;
+}
+
+interface Message {
     id: number;
     sender_id: number;
     conversation_id: number;
@@ -15,12 +25,13 @@ type Message = {
     is_deleted: boolean;
     deleted_by: number | null;
     deleted_at: string | null;
+    attachments?: Attachment[];
     sender?: {
         id: number;
         name: string;
         avatar: string | null;
     };
-};
+}
 
 interface ChatBodyProps {
     conversationId: number;
@@ -30,11 +41,10 @@ export default function ChatBody({ conversationId }: ChatBodyProps) {
     const [messages, setMessages] = useState<Message[]>([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const scrollContainerRef = useRef<HTMLDivElement>(null);
 
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
     const myInfo = getUserInfo();
     const myId = myInfo?.id;
-    const token = localStorage.getItem("authToken");
 
     const scrollToBottom = () => {
         const container = scrollContainerRef.current;
@@ -44,74 +54,102 @@ export default function ChatBody({ conversationId }: ChatBodyProps) {
     };
 
     useEffect(() => {
+        const token = localStorage.getItem("authToken");
         if (!token || !conversationId) return;
 
-        axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-        axios.defaults.headers.common["Accept"] = "application/json";
-
-        let channel: any;
-
-        const init = async () => {
+        const fetchMessages = async () => {
             setLoading(true);
-
-            // 1. Lấy danh sách tin nhắn ban đầu
             try {
-                const res = await axios.get(
-                    `${API}/messages/${conversationId}`
+                const fetchedMessages = await messengerApi(
+                    conversationId,
+                    token,
+                    (msg: string) => setError(msg),
+                    (loading: boolean) => setLoading(loading)
                 );
-                const rawMessages = res.data.data;
-                if (Array.isArray(rawMessages)) {
-                    setMessages(rawMessages.reverse()); // đảo thứ tự tin nhắn để mới nằm cuối
-                } else {
-                    setMessages([]);
-                }
-            } catch (err) {
-                console.error("❌ Failed to load messages", err);
+
+                setMessages(
+                    Array.isArray(fetchedMessages)
+                        ? fetchedMessages.reverse()
+                        : []
+                );
+            } catch (error) {
                 setError("Không thể tải tin nhắn.");
             } finally {
                 setLoading(false);
             }
-
-            // 2. Khởi tạo Echo
-            try {
-                const { default: echo } = await import("../../echo/createEcho");
-
-                channel = echo
-                    .private(`conversation.${conversationId}`)
-                    .listen(".message.sent", (e: any) => {
-                        if (e.message) {
-                            setMessages((prev) => {
-                                const exists = prev.some(
-                                    (m) => m.id === e.message.id
-                                );
-                                return exists ? prev : [...prev, e.message];
-                            });
-                        }
-                    });
-            } catch (err) {
-                console.error("❌ Echo failed", err);
-            }
         };
 
-        init();
+        fetchMessages();
+
+        const channel = echo.private(`conversation.${conversationId}`);
+        channel.listen(".message.sent", (e: any) => {
+            if (e.message) {
+                setMessages((prev) => {
+                    const exists = prev.some((msg) => msg.id === e.message.id);
+                    return exists ? prev : [...prev, e.message];
+                });
+            }
+        });
 
         return () => {
-            if (channel) {
-                channel.stopListening(".message.sent");
-                channel.unsubscribe();
-            }
+            echo.leave(`conversation.${conversationId}`);
         };
     }, [conversationId]);
 
-    // Scroll xuống cuối khi có tin nhắn mới
     useEffect(() => {
         scrollToBottom();
     }, [messages]);
 
+    const renderAttachments = (attachments: Attachment[]) => {
+        return attachments.map((file) => {
+            const url = `${BASE_URL}${file.file_url}`;
+
+            if (file.file_type.startsWith("image/")) {
+                return (
+                    <img
+                        key={file.id}
+                        src={url}
+                        alt="attachment"
+                        className="rounded-lg max-w-xs border border-gray-600"
+                    />
+                );
+            }
+
+            if (file.file_type.startsWith("video/")) {
+                return (
+                    <video
+                        key={file.id}
+                        controls
+                        className="rounded-lg max-w-xs border border-gray-600"
+                        src={url}
+                    />
+                );
+            }
+
+            return (
+                <div
+                    key={file.id}
+                    className="bg-gray-800 p-3 rounded-lg flex items-center gap-2 text-white border border-gray-600"
+                >
+                    <span className="text-xl">📄</span>
+                    <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download
+                        className="hover:underline truncate max-w-[200px]"
+                    >
+                        {file.file_path.split("/").pop()}
+                    </a>
+                </div>
+            );
+        });
+    };
+
     return (
         <div
             ref={scrollContainerRef}
-            className="flex-1 overflow-y-auto px-4 py-2 space-y-3 bg-gray-900"
+            className="flex-1 overflow-y-auto px-4 py-2 space-y-4 bg-gray-900"
         >
             {loading ? (
                 <div className="text-gray-400 text-sm">
@@ -124,14 +162,15 @@ export default function ChatBody({ conversationId }: ChatBodyProps) {
             ) : (
                 messages.map((msg) => {
                     const isMe = msg.sender_id === myId;
+
                     const avatarUrl = msg.sender?.avatar
-                        ? `https://k22cnt3_project4_minichat.test/storage/${msg.sender.avatar}`
+                        ? `${BASE_URL}/storage/${msg.sender.avatar}`
                         : "/default-avatar.png";
 
                     return (
                         <div
                             key={msg.id}
-                            className={`flex items-end gap-2 ${
+                            className={`group flex items-end gap-2 ${
                                 isMe ? "justify-end" : "justify-start"
                             }`}
                         >
@@ -142,17 +181,26 @@ export default function ChatBody({ conversationId }: ChatBodyProps) {
                                     className="w-8 h-8 rounded-full border border-gray-600"
                                 />
                             )}
+
                             <div
-                                className={`px-4 py-2 rounded-xl max-w-xs md:max-w-sm lg:max-w-md shadow ${
+                                className={`relative px-4 py-2 rounded-2xl max-w-xs md:max-w-sm lg:max-w-md shadow space-y-2 ${
                                     isMe
                                         ? "bg-blue-600 text-white rounded-br-none"
                                         : "bg-gray-700 text-white rounded-bl-none"
                                 }`}
                             >
-                                <div className="text-sm whitespace-pre-wrap">
-                                    {msg.content || <i>(Không có nội dung)</i>}
+                                <div className="text-sm break-words whitespace-pre-wrap">
+                                    {msg.message_type === "text" &&
+                                        (msg.content || (
+                                            <i>(Không có nội dung)</i>
+                                        ))}
+
+                                    {msg.message_type === "file" &&
+                                        msg.attachments &&
+                                        renderAttachments(msg.attachments)}
                                 </div>
-                                <div className="text-[11px] mt-1 text-gray-300 text-right">
+
+                                <div className="text-[11px] text-gray-300 text-right">
                                     {new Date(
                                         msg.created_at
                                     ).toLocaleTimeString("vi-VN", {
@@ -160,12 +208,20 @@ export default function ChatBody({ conversationId }: ChatBodyProps) {
                                         minute: "2-digit",
                                     })}
                                 </div>
+
+                                {/* Nút 3 chấm cho hành động - nằm góc dưới bên trái */}
+                                {isMe && (
+                                    <div className="absolute bottom-1 left-1 hidden group-hover:block">
+                                        <MessageActions messageId={msg.id} />
+                                    </div>
+                                )}
                             </div>
+
                             {isMe && (
                                 <img
                                     src={
                                         myInfo?.avatar
-                                            ? `https://k22cnt3_project4_minichat.test/storage/${myInfo.avatar}`
+                                            ? `${BASE_URL}/storage/${myInfo.avatar}`
                                             : "/default-avatar.png"
                                     }
                                     alt="avatar"

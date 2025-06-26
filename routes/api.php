@@ -81,6 +81,9 @@ Route::prefix('v1')->group(function () {
             // Search Mesage
             Route::post('search', [MessageController::class, 'search']);
 
+              // Hide a message
+              Route::post('{id}/hide', [MessageController::class, 'hide']);
+
         });
 
         // Group
