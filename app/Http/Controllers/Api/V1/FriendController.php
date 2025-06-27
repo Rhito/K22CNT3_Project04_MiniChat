@@ -175,7 +175,7 @@ class FriendController extends Controller
             ]);
 
             $userId = Auth::id();
-            $keyword = $request->query;
+            $keyword = $request->input('query');
 
             $users = User::where('id', '!=', $userId)
                 ->where(function ($q) use ($keyword) {
