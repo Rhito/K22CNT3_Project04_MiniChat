@@ -67,7 +67,7 @@ Route::prefix('v1')->group(function () {
             Route::patch('{id}', [MessageController::class, 'update']);
 
             // Delete the message
-            Route::delete('{id}', [MessageController::class, 'destroy']);
+            Route::put('{id}', [MessageController::class, 'destroy']);
 
             // Seen them message by the id of message
             Route::post('seen/{id}', [MessageController::class, 'seen']);

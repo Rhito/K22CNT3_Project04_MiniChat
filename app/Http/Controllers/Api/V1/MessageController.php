@@ -15,6 +15,8 @@ use App\Traits\HttpResponses;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Resources\MessageResource;
 use App\Events\MessageSent;
+use App\Events\MessageUpdated;
+use App\Events\MessageDeleted;
 use Carbon\Carbon;
 
 class MessageController extends Controller
@@ -118,14 +120,21 @@ class MessageController extends Controller
             return $this->error('Unauthorized', null, 403);
         }
 
+        if ($message->is_deleted) {
+            return $this->error('Tin nhắn đã bị xoá, không thể chỉnh sửa.', null, 400);
+        }
+
         $request->validate([
             'content' => 'required|string',
         ]);
 
         $message->update(['content' => $request->content]);
 
+        broadcast(new MessageUpdated($message))->toOthers();
+
         return $this->success(new MessageResource($message), 'Message updated');
     }
+
 
     public function destroy($id)
     {
@@ -138,21 +147,26 @@ class MessageController extends Controller
         // Nếu là tin nhắn file hoặc image → xoá file vật lý và DB record
         if (in_array($message->message_type, ['file', 'image'])) {
             foreach ($message->attachments as $attachment) {
-                if ($attachment->file_path && Storage::disk('public')->exists($attachment->file_path)) {
+                if (
+                    $attachment->file_path &&
+                    Storage::disk('public')->exists($attachment->file_path)
+                ) {
                     Storage::disk('public')->delete($attachment->file_path);
                 }
-                $attachment->delete(); // Xoá DB
+                $attachment->delete();
             }
         }
 
-        // Soft delete message
+        // Soft delete & cập nhật nội dung
         $message->update([
             'is_deleted' => true,
             'deleted_by' => Auth::id(),
             'deleted_at' => now(),
+            'content' => 'Tin nhắn đã bị xoá',
         ]);
-
+        broadcast(new MessageDeleted($message))->toOthers();
         return $this->success(new MessageResource($message->load('sender')), 'Message and attachments deleted');
+
     }
 
 

@@ -1,13 +1,24 @@
 import { MoreVertical, Trash2, EyeOff, Pencil } from "lucide-react";
 import { useState } from "react";
+import EditMessageModal from "./EditMessageModal";
 
 interface Props {
     messageId: number;
+    currentContent: string;
     onHideSuccess: () => void;
+    onDeleteSuccess: () => void;
+    onEditSuccess: (newContent: string) => void;
 }
 
-export default function MessageActions({ messageId, onHideSuccess }: Props) {
+export default function MessageActions({
+    messageId,
+    currentContent,
+    onHideSuccess,
+    onDeleteSuccess,
+    onEditSuccess,
+}: Props) {
     const [open, setOpen] = useState(false);
+    const [showEditModal, setShowEditModal] = useState(false);
 
     const token = localStorage.getItem("authToken");
 
@@ -42,7 +53,7 @@ export default function MessageActions({ messageId, onHideSuccess }: Props) {
                     import.meta.env.VITE_API_BASE_URL
                 }/api/v1/messages/${messageId}`,
                 {
-                    method: "DELETE",
+                    method: "PUT",
                     headers: {
                         Authorization: `Bearer ${token}`,
                         Accept: "application/json",
@@ -50,6 +61,7 @@ export default function MessageActions({ messageId, onHideSuccess }: Props) {
                 }
             );
             console.log("Đã xoá tin nhắn");
+            onDeleteSuccess();
         } catch (error) {
             console.error("Lỗi xoá tin nhắn", error);
         }
@@ -57,8 +69,7 @@ export default function MessageActions({ messageId, onHideSuccess }: Props) {
     };
 
     const handleEdit = () => {
-        // Gọi modal hoặc điều hướng đến form sửa
-        alert("Chức năng sửa đang được phát triển.");
+        setShowEditModal(true);
         setOpen(false);
     };
 
@@ -92,6 +103,15 @@ export default function MessageActions({ messageId, onHideSuccess }: Props) {
                         <Trash2 size={14} /> Xoá
                     </button>
                 </div>
+            )}
+
+            {showEditModal && (
+                <EditMessageModal
+                    messageId={messageId}
+                    initialContent={currentContent}
+                    onClose={() => setShowEditModal(false)}
+                    onUpdated={onEditSuccess}
+                />
             )}
         </div>
     );

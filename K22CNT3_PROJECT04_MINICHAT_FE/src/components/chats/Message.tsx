@@ -11,16 +11,15 @@ export default function MessageInput({ conversationId, onMessageSent }: Props) {
     const [sendMessage, setSendMessage] = useState("");
     const [sending, setSending] = useState(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
-
     const token = localStorage.getItem("authToken");
 
     const handleSend = async () => {
         if (!sendMessage.trim() || !token) return;
-
         setSending(true);
+
         try {
             const res = await axios.post(
-                `https://k22cnt3_project4_minichat.test/api/v1/messages`,
+                `${import.meta.env.VITE_API_BASE_URL}/api/v1/messages`,
                 {
                     conversation_id: conversationId,
                     content: sendMessage,
@@ -65,7 +64,6 @@ export default function MessageInput({ conversationId, onMessageSent }: Props) {
                     },
                 }
             );
-
             onMessageSent?.(res.data.data);
         } catch (err: any) {
             console.error(
@@ -87,32 +85,12 @@ export default function MessageInput({ conversationId, onMessageSent }: Props) {
     };
 
     return (
-        <div className="w-full px-4 py-3 bg-gray-800 border-t border-gray-700">
-            <div className="relative flex items-center gap-3">
-                {/* Input chính */}
-                <input
-                    type="text"
-                    value={sendMessage}
-                    onChange={(e) => setSendMessage(e.target.value)}
-                    onKeyDown={handleKeyDown}
-                    placeholder="Nhập tin nhắn..."
-                    disabled={sending}
-                    className="flex-1 rounded-full bg-gray-700 text-white px-4 py-3 pr-20 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-
-                {/* Nút gửi */}
-                <button
-                    onClick={handleSend}
-                    disabled={sending || !sendMessage.trim()}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-white hover:text-blue-400 transition disabled:opacity-50"
-                >
-                    <Send size={20} />
-                </button>
-
-                {/* Nút gửi file */}
+        <div className="w-full px-4 py-3 bg-gray-900 border-t border-gray-700">
+            <div className="flex items-center bg-gray-800 rounded-full px-4 py-2 shadow-inner focus-within:ring-2 focus-within:ring-blue-600 transition">
+                {/* Nút đính kèm */}
                 <label
-                    className="absolute right-10 top-1/2 -translate-y-1/2 text-white hover:text-green-400 cursor-pointer transition"
-                    title="Gửi file"
+                    className="text-gray-300 hover:text-green-400 cursor-pointer transition"
+                    title="Đính kèm file"
                 >
                     <Paperclip size={20} />
                     <input
@@ -122,6 +100,27 @@ export default function MessageInput({ conversationId, onMessageSent }: Props) {
                         className="hidden"
                     />
                 </label>
+
+                {/* Input nhập tin nhắn */}
+                <input
+                    type="text"
+                    value={sendMessage}
+                    onChange={(e) => setSendMessage(e.target.value)}
+                    onKeyDown={handleKeyDown}
+                    placeholder="Nhập tin nhắn..."
+                    disabled={sending}
+                    className="flex-1 bg-transparent border-none outline-none text-white px-4 placeholder-gray-400 text-sm"
+                />
+
+                {/* Nút gửi */}
+                <button
+                    onClick={handleSend}
+                    disabled={sending || !sendMessage.trim()}
+                    className="text-gray-300 hover:text-blue-500 transition disabled:opacity-40 disabled:cursor-not-allowed"
+                    title="Gửi"
+                >
+                    <Send size={20} />
+                </button>
             </div>
         </div>
     );
