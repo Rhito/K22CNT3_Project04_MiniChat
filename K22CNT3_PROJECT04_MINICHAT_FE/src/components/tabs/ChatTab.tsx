@@ -120,10 +120,14 @@ const ChatTab: React.FC<ChatTabProps> = ({ onSelectConversation }) => {
                         const avatarUrl =
                             conv.type === "group"
                                 ? conv.avatar
-                                    ? `https://k22cnt3_project4_minichat.test/storage/${conv.avatar}`
+                                    ? `${
+                                          import.meta.env.VITE_API_BASE_URL
+                                      }/storage/${conv.avatar}`
                                     : "/group-avatar.png"
                                 : other?.avatar
-                                ? `https://k22cnt3_project4_minichat.test/storage/${other.avatar}`
+                                ? `${
+                                      import.meta.env.VITE_API_BASE_URL
+                                  }/storage/${other.avatar}`
                                 : "/default-avatar.png";
 
                         return (

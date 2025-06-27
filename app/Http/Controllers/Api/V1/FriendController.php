@@ -82,13 +82,12 @@ class FriendController extends Controller
            ->where('receiver_id', Auth::id())
            ->where('status', 'pending')
            ->first();
-        return $this->success([Auth::id(), $friendship], 'Friend request rejected');
 
        if (!$friendship) {
            return $this->error('Friend request not found', null, 404);
        }
 
-       $friendship->update(['status' => 'rejected']);
+       $friendship->delete();
 
        return $this->success(null, 'Friend request rejected');
    }

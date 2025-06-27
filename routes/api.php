@@ -34,7 +34,7 @@ Route::prefix('v1')->group(function () {
             Route::post('accept', [FriendController::class, 'acceptRequest']);
 
             // reject friend requested
-            Route::patch('reject/{id}', [FriendController::class, 'rejectRequest']);
+            Route::delete('reject/{id}', [FriendController::class, 'rejectRequest']);
 
             //Get list of friend
             Route::get('/', [FriendController::class, 'list']);
