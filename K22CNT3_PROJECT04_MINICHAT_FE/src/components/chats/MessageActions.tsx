@@ -6,7 +6,7 @@ interface Props {
     messageId: number;
     currentContent: string;
     onHideSuccess: () => void;
-    onDeleteSuccess: () => void;
+    onDeleteSuccess: () => void; // Không dùng nữa, giữ lại cho tương thích
     onEditSuccess: (newContent: string) => void;
 }
 
@@ -37,10 +37,10 @@ export default function MessageActions({
                     },
                 }
             );
-            console.log("Đã ẩn tin nhắn");
-            onHideSuccess();
+            console.log("✅ Tin nhắn đã được ẩn");
+            onHideSuccess(); // update UI ngay
         } catch (error) {
-            console.error("Lỗi ẩn tin nhắn", error);
+            console.error("❌ Lỗi ẩn tin nhắn:", error);
         }
         setOpen(false);
     };
@@ -53,17 +53,17 @@ export default function MessageActions({
                     import.meta.env.VITE_API_BASE_URL
                 }/api/v1/messages/${messageId}`,
                 {
-                    method: "PUT",
+                    method: "PUT", // soft delete hoặc cập nhật trạng thái
                     headers: {
                         Authorization: `Bearer ${token}`,
                         Accept: "application/json",
                     },
                 }
             );
-            console.log("Đã xoá tin nhắn");
+            console.log("✅ Tin nhắn đã được xoá (theo realtime)");
             onDeleteSuccess();
         } catch (error) {
-            console.error("Lỗi xoá tin nhắn", error);
+            console.error("❌ Lỗi xoá tin nhắn:", error);
         }
         setOpen(false);
     };

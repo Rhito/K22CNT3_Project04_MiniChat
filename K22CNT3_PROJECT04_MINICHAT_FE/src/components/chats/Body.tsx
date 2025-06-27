@@ -73,7 +73,7 @@ export default function ChatBody({ conversationId }: ChatBodyProps) {
                         ? fetchedMessages.reverse()
                         : []
                 );
-            } catch (error) {
+            } catch {
                 setError("Không thể tải tin nhắn.");
             } finally {
                 setLoading(false);
@@ -133,7 +133,17 @@ export default function ChatBody({ conversationId }: ChatBodyProps) {
     };
 
     const handleDeleteMessage = (id: number) => {
-        setMessages((prev) => prev.filter((msg) => msg.id !== id));
+        setMessages((prev) =>
+            prev.map((msg) =>
+                msg.id === id
+                    ? {
+                          ...msg,
+                          content: "Tin nhắn đã bị xoá",
+                          updated_at: new Date().toISOString(),
+                      }
+                    : msg
+            )
+        );
     };
 
     const handleEditMessage = (id: number, newContent: string) => {
@@ -283,9 +293,7 @@ export default function ChatBody({ conversationId }: ChatBodyProps) {
                                                 •{" "}
                                                 {new Date(
                                                     msg.created_at
-                                                ).toLocaleDateString(
-                                                    "vi-VN"
-                                                )}{" "}
+                                                ).toLocaleDateString("vi-VN")}
                                             </>
                                         )}
                                     </span>
