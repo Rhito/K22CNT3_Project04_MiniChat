@@ -21,7 +21,7 @@ Route::prefix('v1')->group(function () {
         Route::patch('/user', [AuthController::class, 'editUser'])->name('v1.editUser');
         Route::post('/user/avatar', [AuthController::class, 'editAvatar'])->name('v1.editAvatar');
 
-        Route::get('/conversation', [ConversationController::class, 'getAll']);
+        Route::get('/conversations', [ConversationController::class, 'getAll']);
         // FRIENDS ENDPOINT
         Route::prefix('friends')->group(function () {
             // send a friend request

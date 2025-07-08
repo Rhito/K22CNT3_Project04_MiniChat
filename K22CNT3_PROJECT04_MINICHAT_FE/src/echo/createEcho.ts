@@ -7,7 +7,7 @@ declare global {
     }
 }
 
-import { getAuthToken } from "../Api/loginApi";
+const authToken = localStorage.getItem("authToken");
 
 window.Pusher = Pusher;
 
@@ -24,7 +24,7 @@ const echo = new Echo({
     authEndpoint: `${import.meta.env.VITE_API_BASE_URL}/api/broadcasting/auth`, // ✅ Laravel Reverb API
     auth: {
         headers: {
-            Authorization: `Bearer ${getAuthToken()}`, // ✅ Bearer Token cho Sanctum
+            Authorization: `Bearer ${authToken}`, // ✅ Bearer Token cho Sanctum
             Accept: "application/json",
         },
     },

@@ -21,8 +21,12 @@ class AuthController extends Controller
 
     public function login(LoginUserRequest $request)
     {
+        $credentials = $request->only('email', 'password');
+
+        $remember = $request->remember_me ?? false;
+
         // Attempt to authenticate the user
-        if (!Auth::attempt($request->only('email', 'password'))) {
+        if (!Auth::attempt($credentials, $remember)) {
             return $this->error('Credentials do not match', '', 401);
         }
 
@@ -34,6 +38,13 @@ class AuthController extends Controller
             return $this->error('Your account is inactive', '', 403);
         }
 
+         // When use cookie/session (remember_me=true) then return the user
+         if ($remember) {
+            return $this->success([
+                'user' => new UserResource($user),
+            ], 'Đăng nhập thành công');
+        }
+
         // Generate API token
         $token = $user->createToken('API Token of ' . $user->name)->plainTextToken;
 
@@ -43,7 +54,6 @@ class AuthController extends Controller
             'token' => $token,
         ], 'Login successful');
     }
-
 
     public function register(StoreUserRequest $request)
     {

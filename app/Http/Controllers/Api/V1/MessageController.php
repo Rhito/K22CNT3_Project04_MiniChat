@@ -239,6 +239,7 @@ class MessageController extends Controller
             $url = Storage::url($path);
 
             $attachments[] = $message->attachments()->create([
+                'file_name' => $file->getClientOriginalName(),
                 'file_path' => $path,
                 'file_url' => $url,
                 'file_type' => $file->getMimeType(),
