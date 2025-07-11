@@ -90,7 +90,7 @@ class MessageController extends Controller
                 $q->where('sender_id', $receiverId)
                   ->where('receiver_id', Auth::id())
                   ->where('status', 'blocked');
-            })->orWhere(function ($q) use ($receiverId) {
+})->orWhere(function ($q) use ($receiverId) {
                 $q->where('sender_id', Auth::id())
                   ->where('receiver_id', $receiverId)
                   ->where('status', 'blocked');
@@ -183,8 +183,7 @@ class MessageController extends Controller
         if ($already) {
             return $this->success(null, 'Message already hidden');
         }
-
-        DeletedMessage::create([
+DeletedMessage::create([
             'messages_id' => $message->id,
             'users_id' => $userId,
             'deleted_at' => Carbon::now(),
@@ -278,7 +277,7 @@ class MessageController extends Controller
     protected function authorizeParticipant(Conversation $conversation)
     {
         $userId = Auth::id();
-        $isParticipant = $conversation->participants()->where('users_id', $userId)->exists();
+$isParticipant = $conversation->participants()->where('users_id', $userId)->exists();
 
         if (!$isParticipant) {
             abort(403, 'You are not a participant of this conversation.');

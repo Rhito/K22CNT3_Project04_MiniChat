@@ -75,6 +75,7 @@ class FriendController extends Controller
         return $this->success($friendship, 'Friend request accepted');
     }
 
+<<<<<<< Updated upstream
    // 4. Reject a friend request
    public function rejectRequest(Request $request, $id)
    {
@@ -82,15 +83,28 @@ class FriendController extends Controller
            ->where('receiver_id', Auth::id())
            ->where('status', 'pending')
            ->first();
+=======
+    // 4. Reject a friend request
+    public function rejectRequest(Request $request, $id)
+    {
+        $friendship = Friendship::where('id', $id)
+            ->where('receiver_id', Auth::id())
+            ->where('status', 'pending')
+            ->first();
+>>>>>>> Stashed changes
 
-       if (!$friendship) {
-           return $this->error('Friend request not found', null, 404);
-       }
+        if (!$friendship) {
+            return $this->error('Friend request not found', null, 404);
+        }
 
+<<<<<<< Updated upstream
        $friendship->delete();
+=======
+        $friendship->update(['status' => 'rejected']);
+>>>>>>> Stashed changes
 
-       return $this->success(null, 'Friend request rejected');
-   }
+        return $this->success(null, 'Friend request rejected');
+    }
 
     // 5. List all accepted friends
     public function list()
@@ -101,7 +115,7 @@ class FriendController extends Controller
             ->where('status', 'accepted')
             ->where(function ($q) use ($userId) {
                 $q->where('sender_id', $userId)
-                  ->orWhere('receiver_id', $userId);
+                    ->orWhere('receiver_id', $userId);
             })
             ->get()
             ->map(function ($f) use ($userId) {
@@ -130,43 +144,63 @@ class FriendController extends Controller
 
         return $this->success(null, 'Friend removed successfully');
     }
-        // 7. Block a user
-        public function block($id)
-        {
-            $userId = Auth::id();
+    // 7. Block a user
+    public function block($id)
+    {
+        $userId = Auth::id();
 
-            $friendship = Friendship::updateOrCreate(
-                [
-                    'sender_id' => $userId,
-                    'receiver_id' => $id,
-                ],
-                [
-                    'status' => 'blocked',
-                ]
-            );
+        $friendship = Friendship::updateOrCreate(
+            [
+                'sender_id' => $userId,
+                'receiver_id' => $id,
+            ],
+            [
+                'status' => 'blocked',
+            ]
+        );
 
-            return $this->success($friendship, 'User blocked successfully');
+        return $this->success($friendship, 'User blocked successfully');
+    }
+
+    // 8. Unblock a user
+    public function unblock($id)
+    {
+        $userId = Auth::id();
+
+        $friendship = Friendship::where('sender_id', $userId)
+            ->where('receiver_id', $id)
+            ->where('status', 'blocked')
+            ->first();
+
+        if (!$friendship) {
+            return $this->error('Blocked user not found', null, 404);
         }
 
-        // 8. Unblock a user
-        public function unblock($id)
-        {
-            $userId = Auth::id();
+        $friendship->delete();
 
-            $friendship = Friendship::where('sender_id', $userId)
-                ->where('receiver_id', $id)
-                ->where('status', 'blocked')
-                ->first();
+        return $this->success(null, 'User unblocked successfully');
+    }
 
-            if (!$friendship) {
-                return $this->error('Blocked user not found', null, 404);
-            }
+    // 9. Search user
+    public function searchUser(Request $request)
+    {
+        $request->validate([
+            'query' => 'required|string|max:255',
+        ]);
 
-            $friendship->delete();
+        $userId = Auth::id();
+        $keyword = $request->input('query');
 
-            return $this->success(null, 'User unblocked successfully');
-        }
+        $users = User::where('id', '!=', $userId)
+            ->where(function ($q) use ($keyword) {
+                $q->where('name', 'like', "%$keyword%")
+                    ->orWhere('email', 'like', "%$keyword%");
+                //->orWhere('username', 'like', "%$keyword%"); // Nếu bạn có cột `username`
+            })
+            ->limit(20)
+            ->get();
 
+<<<<<<< Updated upstream
         // 9. Search user
         public function searchUser(Request $request)
         {
@@ -188,5 +222,9 @@ class FriendController extends Controller
 
             return $this->success($users, 'Search result');
         }
+=======
+        return $this->success($users, 'Search result');
+    }
+>>>>>>> Stashed changes
 
 }

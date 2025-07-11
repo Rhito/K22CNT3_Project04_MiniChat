@@ -6,7 +6,7 @@ export default defineConfig({
     plugins: [react(), tailwindcss()],
     server: {
         proxy: {
-            "/api": "https://k22cnt3_project4_minichat.test/",
+            "/api": "https://k22cnt3_project04_minichat.test/",
         },
         host: "0.0.0.0",
         port: 5173,
