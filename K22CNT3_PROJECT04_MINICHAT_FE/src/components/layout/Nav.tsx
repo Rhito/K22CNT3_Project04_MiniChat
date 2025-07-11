@@ -20,12 +20,10 @@ type NavProps = {
 
 const menuItems: { id: TabId; icon: JSX.Element; label: string }[] = [
     { id: "chat", icon: <FiMessageSquare />, label: "Chat" },
-    { id: "contacts", icon: <FaRegAddressBook />, label: "Contacts" },
     { id: "profile", icon: <FiUser />, label: "Profile" },
     { id: "groups", icon: <FiUsers />, label: "Groups" },
-    { id: "calls", icon: <FiPhone />, label: "Calls" },
-    { id: "bookmarks", icon: <FiBookmark />, label: "Bookmarks" },
     { id: "settings", icon: <FiSettings />, label: "Settings" },
+    { id: "friends", icon: <FaRegAddressBook />, label: "Friends" },
 ];
 
 export default function Nav({ active, onSelect }: NavProps) {

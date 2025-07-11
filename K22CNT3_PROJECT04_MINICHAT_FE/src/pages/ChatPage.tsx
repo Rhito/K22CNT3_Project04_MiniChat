@@ -7,6 +7,7 @@ import ChatHeader from "../components/chat/ChatHeader";
 import ChatBody from "../components/chat/ChatBody";
 import ChatInput from "../components/chat/ChatInput";
 import type { TabId } from "../types";
+import FriendsPage from "./FriendsPage";
 
 export default function ChatPage() {
     const [activeTab, setActiveTab] = useState<TabId>("chat");
@@ -24,16 +25,19 @@ export default function ChatPage() {
                 activeTab={activeTab}
                 selectedConversationId={selectedConversationId}
                 onSelectConversation={(id) => setSelectedConversationId(id)}
+                onTabChange={setActiveTab}
             />
 
             {/* Main chat area */}
             <div className="flex flex-col flex-1">
-                {selectedConversationId ? (
+                {activeTab === "chat" && selectedConversationId ? (
                     <>
                         <ChatHeader conversationId={selectedConversationId} />
                         <ChatBody conversationId={selectedConversationId} />
                         <ChatInput conversationId={selectedConversationId} />
                     </>
+                ) : activeTab === "friends" ? (
+                    <FriendsPage />
                 ) : (
                     <div className="flex flex-1 items-center justify-center text-gray-400 text-sm">
                         Chọn một cuộc trò chuyện để bắt đầu

@@ -37,12 +37,29 @@ export interface Conversation {
         name: string;
         avatar: string | null;
     }[];
+    last_message?: {
+        content: string;
+        created_at: string;
+        sender_id: number;
+        is_deleted: boolean;
+    };
 }
-export type TabId =
-    | "chat"
-    | "contacts"
-    | "profile"
-    | "groups"
-    | "calls"
-    | "bookmarks"
-    | "settings";
+export type TabId = "chat" | "profile" | "groups" | "friends" | "settings";
+
+export type Friend = {
+    id: number; // id của người bạn (user)
+    name: string;
+    email: string;
+    avatar: string | null;
+    status: "accepted" | "pending" | "requested"; // trạng thái quan hệ
+    is_sender: boolean; // true nếu là người gửi lời mời
+};
+
+export type User = {
+    id: number;
+    name: string;
+    email: string;
+    avatar: string | null;
+    is_active: boolean;
+    is_blocked: boolean;
+};
