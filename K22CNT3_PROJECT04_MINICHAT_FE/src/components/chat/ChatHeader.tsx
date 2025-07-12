@@ -1,14 +1,7 @@
-<<<<<<< Updated upstream:K22CNT3_PROJECT04_MINICHAT_FE/src/components/chat/ChatHeader.tsx
 // src/components/chat/ChatHeader.tsx
 
 import { useConversationById } from "../../hooks/useConversationById";
 import { getUserInfo } from "../../services/authService";
-=======
-import { useEffect, useState } from "react";
-import { conversationApi } from "../../Api/conversationApi";
-import type { Conversation } from "../../Api/conversationApi";
-import { getUserInfo } from "../../Api/loginApi";
->>>>>>> Stashed changes:K22CNT3_PROJECT04_MINICHAT_FE/src/components/chats/Header.tsx
 
 interface ChatHeaderProps {
     conversationId: number;

@@ -14,4 +14,5 @@ export async function logoutApi() {
     );
     localStorage.removeItem("authToken");
     localStorage.removeItem("user");
+    window.location.href = "/";
 }

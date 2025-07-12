@@ -44,22 +44,26 @@ export default function ConversationItem({
         : "";
 
     return (
-        <button
-            onClick={() => onSelect(conversation.id)}
-            className={`flex w-full items-center gap-3 px-4 py-2 hover:bg-gray-800 rounded text-left ${
-                isActive ? "bg-gray-800 text-white" : "text-gray-300"
-            }`}
-        >
-            <img
-                src={avatar}
-                alt={displayName}
-                className="w-10 h-10 rounded-full object-cover border border-gray-600"
-            />
-            <div className="flex-1 min-w-0">
-                <div className="font-medium truncate">{displayName}</div>
-                <div className="text-xs truncate text-gray-400">{preview}</div>
-            </div>
-            {time && <div className="text-xs text-gray-500">{time}</div>}
-        </button>
+        <>
+            <button
+                onClick={() => onSelect(conversation.id)}
+                className={`flex w-full items-center gap-3 px-4 py-2 hover:bg-gray-800 rounded text-left ${
+                    isActive ? "bg-gray-800 text-white" : "text-gray-300"
+                }`}
+            >
+                <img
+                    src={avatar}
+                    alt={displayName}
+                    className="w-10 h-10 rounded-full object-cover border border-gray-600"
+                />
+                <div className="flex-1 min-w-0">
+                    <div className="font-medium truncate">{displayName}</div>
+                    <div className="text-xs truncate text-gray-400">
+                        {preview}
+                    </div>
+                </div>
+                {time && <div className="text-xs text-gray-500">{time}</div>}
+            </button>
+        </>
     );
 }

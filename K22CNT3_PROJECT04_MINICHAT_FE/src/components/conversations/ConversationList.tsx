@@ -16,17 +16,19 @@ export default function ConversationList({
     onSelect,
 }: Props) {
     return (
-        <ul className="space-y-1">
-            {conversations.map((conv) => (
-                <li key={conv.id}>
-                    <ConversationItem
-                        conversation={conv}
-                        myId={myId}
-                        isActive={conv.id === selectedId}
-                        onSelect={onSelect}
-                    />
-                </li>
-            ))}
-        </ul>
+        <>
+            <ul className="space-y-1">
+                {conversations.map((conv) => (
+                    <li key={conv.id}>
+                        <ConversationItem
+                            conversation={conv}
+                            myId={myId}
+                            isActive={conv.id === selectedId}
+                            onSelect={onSelect}
+                        />
+                    </li>
+                ))}
+            </ul>
+        </>
     );
 }

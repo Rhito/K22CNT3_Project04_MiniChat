@@ -1,6 +1,5 @@
-// src/pages/ChatPage.tsx
-
-import { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Sidebar from "../components/layout/Sidebar";
 import Nav from "../components/layout/Nav";
 import ChatHeader from "../components/chat/ChatHeader";
@@ -10,17 +9,34 @@ import type { TabId } from "../types";
 import FriendsPage from "./FriendsPage";
 
 export default function ChatPage() {
+    const { conversationId } = useParams<{ conversationId?: string }>();
+    const navigate = useNavigate(); // ✅ cần khai báo
+
     const [activeTab, setActiveTab] = useState<TabId>("chat");
     const [selectedConversationId, setSelectedConversationId] = useState<
         number | null
     >(null);
 
+    useEffect(() => {
+        if (conversationId) {
+            const id = parseInt(conversationId, 10);
+            if (!isNaN(id)) {
+                setSelectedConversationId(id);
+                setActiveTab("chat");
+            }
+        }
+    }, [conversationId]);
+
+    useEffect(() => {
+        if (!selectedConversationId && conversationId) {
+            navigate("/chat", { replace: true });
+        }
+    }, [selectedConversationId, conversationId, navigate]);
+
     return (
         <div className="flex h-screen bg-gray-900 text-white">
-            {/* Navigation left bar */}
             <Nav active={activeTab} onSelect={setActiveTab} />
 
-            {/* Sidebar hiển thị danh sách cuộc trò chuyện */}
             <Sidebar
                 activeTab={activeTab}
                 selectedConversationId={selectedConversationId}
@@ -28,7 +44,6 @@ export default function ChatPage() {
                 onTabChange={setActiveTab}
             />
 
-            {/* Main chat area */}
             <div className="flex flex-col flex-1">
                 {activeTab === "chat" && selectedConversationId ? (
                     <>

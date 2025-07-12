@@ -21,9 +21,9 @@ type NavProps = {
 const menuItems: { id: TabId; icon: JSX.Element; label: string }[] = [
     { id: "chat", icon: <FiMessageSquare />, label: "Chat" },
     { id: "profile", icon: <FiUser />, label: "Profile" },
+    { id: "friends", icon: <FaRegAddressBook />, label: "Friends" },
     { id: "groups", icon: <FiUsers />, label: "Groups" },
     { id: "settings", icon: <FiSettings />, label: "Settings" },
-    { id: "friends", icon: <FaRegAddressBook />, label: "Friends" },
 ];
 
 export default function Nav({ active, onSelect }: NavProps) {

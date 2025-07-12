@@ -44,7 +44,7 @@ export default function SearchFriendsTab() {
             />
             <button
                 onClick={handleSearch}
-                className="mt-2 bg-green-500 px-3 py-1 rounded text-sm"
+                className="mt-2 bg-green-500 px-3 py-1 rounded text-sm cursor-pointer hover:bg-green-600 transition"
             >
                 Tìm kiếm
             </button>
