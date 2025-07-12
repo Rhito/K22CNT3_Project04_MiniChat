@@ -44,7 +44,7 @@ export default function FriendList() {
             `Bạn có chắc muốn hủy kết bạn với ${name}?`
         );
         if (!confirmed) return;
-
+        window.location.reload();
         await fetch(`${API_BASE}/api/v1/friends/${id}`, {
             method: "DELETE",
             headers,
